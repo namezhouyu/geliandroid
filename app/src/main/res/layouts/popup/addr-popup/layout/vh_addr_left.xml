@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_VHAddrLeft"
+    android:layout_height="45dp"
+    android:layout_width="match_parent"
+    android:paddingLeft="24dp"
+    android:gravity="center_vertical"
+    tools:text="123"
+    android:textSize="14sp"
+    android:textColor="@color/text_color"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:background="@drawable/shape_line_left14_bottom1" />

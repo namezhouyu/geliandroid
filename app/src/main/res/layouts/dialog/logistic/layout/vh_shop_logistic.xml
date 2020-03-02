@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_logisticName_ShopLogisticVH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_333333"
+        android:textSize="13sp"
+        tools:text="广州鑫盛物流有限公司"/>
+
+
+    <TextView
+        android:id="@+id/tv_logisticInfo_ShopLogisticVH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_logisticName_ShopLogisticVH"
+        app:layout_constraintStart_toStartOf="@id/tv_logisticName_ShopLogisticVH"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_999999"
+        android:textSize="12sp"
+        tools:text="以开拓的思路、超前的意识，塑造崭新的形象，用实践中探索出来的。"/>
+
+
+    <Button
+        android:id="@+id/btn_call_ShopLogisticVH"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_logisticInfo_ShopLogisticVH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/selector_bg_red_red_stroke_r4"
+        android:textSize="12sp"
+        android:textColor="@color/zhusediao"
+        android:text="@string/call"/>
+
+
+    <TextView
+        android:id="@+id/tv_userNameAndPhone_ShopLogisticVH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_call_ShopLogisticVH"
+        app:layout_constraintBottom_toBottomOf="@id/btn_call_ShopLogisticVH"
+        app:layout_constraintStart_toStartOf="@id/tv_logisticName_ShopLogisticVH"
+        android:textColor="@color/zhusediao"
+        android:textSize="12sp"
+        tools:text="陈先生  161356945343"/>
+
+
+</android.support.constraint.ConstraintLayout>

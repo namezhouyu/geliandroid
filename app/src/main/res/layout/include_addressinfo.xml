@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_submitorder_address_addressinfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_submitorder_address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_shouhuodizi"
+        android:drawablePadding="5dp"
+        android:gravity="bottom"
+        android:textColor="@color/text_color"
+        tools:text="steam_l" />
+
+    <TextView
+        android:id="@+id/tv_submitorder_address_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_toEndOf="@id/tv_submitorder_address_name"
+        android:gravity="bottom"
+        android:textColor="@color/text_color"
+        tools:text="13726595135"/>
+
+    <TextView
+        android:id="@+id/tv_submitorder_address_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_submitorder_address_phone"
+        android:background="@drawable/bordergray1dp_2r_shape"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="@string/default_address"
+        android:textColor="@color/specifitext_color"
+        android:textSize="10sp"/>
+
+    <ImageView
+        android:id="@+id/iv_submitorder_address_enter_selectadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/first_btn_jinru"/>
+
+    <TextView
+        android:id="@+id/tv_submitorder_address_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_submitorder_address_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/iv_submitorder_address_enter_selectadd"
+        android:textColor="@color/text_color"
+        tools:text="广东省韶关市乐昌"/>
+
+</RelativeLayout>

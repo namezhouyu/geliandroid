@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="@color/white"
+        android:drawable="@drawable/bgred_2r_shape"
+        android:state_checked="true"/>
+
+    <item
+        android:color="@color/specifitext_color"
+        android:drawable="@drawable/bggary_2r_shape"
+        android:state_enabled="false"/>
+
+    <item
+        android:color="@color/black"
+        android:drawable="@drawable/bordergray1dp_2r_shape"/>
+</selector>

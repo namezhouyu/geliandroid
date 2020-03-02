@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="25dp"
+    android:background="@drawable/beijingban">
+
+
+    <ImageView
+        android:id="@+id/iv_restaurant_restaurantVH"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_name_restaurantVH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_restaurant_restaurantVH"
+        app:layout_constraintStart_toEndOf="@id/iv_restaurant_restaurantVH"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/text_color"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="left|top"
+        tools:text="xxx馆"/>
+
+    <TextView
+        android:id="@+id/tv_mainProducts_restaurantVH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_restaurant_name_restaurantVH"
+        app:layout_constraintTop_toBottomOf="@id/tv_restaurant_name_restaurantVH"
+        app:layout_constraintEnd_toStartOf="@id/tv_distance_restaurantVH"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_b4b4b4"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        tools:text="主营:鸡副食品、六合、温氏"/>
+
+    <TextView
+        android:id="@+id/tv_distance_restaurantVH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_mainProducts_restaurantVH"
+        app:layout_constraintTop_toTopOf="@id/tv_mainProducts_restaurantVH"
+        app:layout_constraintBottom_toBottomOf="@id/tv_mainProducts_restaurantVH"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_b4b4b4"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        tools:text="3.8km"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_KeyWord_restaurantVH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_restaurant_name_restaurantVH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mainProducts_restaurantVH"
+        android:layout_marginTop="2dp"
+        app:scrollbars="none"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_addr_restaurantVH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_restaurant_name_restaurantVH"
+        app:layout_constraintBottom_toBottomOf="@id/iv_restaurant_restaurantVH"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="10sp"
+        android:textColor="@color/text_b4b4b4"
+        tools:text="地址"/>
+
+</android.support.constraint.ConstraintLayout>

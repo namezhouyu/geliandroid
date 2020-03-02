@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/rg_home_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkedButton="@+id/rb_home_index"
+        android:orientation="horizontal">
+
+        <RadioButton android:id="@+id/rb_home_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_index_selete"
+            android:gravity="center"
+            android:text="@string/index"/>
+
+        <RadioButton android:id="@+id/rb_home_find"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_find_selete"
+            android:gravity="center"
+            android:text="@string/find"/>
+
+        <!--<RadioButton android:id="@+id/rb_home_restaurant"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:button="@null"-->
+            <!--android:drawableTop="@drawable/rb_restaurant_selete"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/restaurant"/>-->
+
+        <RadioButton android:id="@+id/rb_home_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_cart_selete"
+            android:gravity="center"
+            android:text="@string/cart"/>
+
+        <RadioButton android:id="@+id/rb_home_mine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rb_mine_selete"
+            android:gravity="center"
+            android:text="@string/minde"/>
+    </RadioGroup>
+</LinearLayout>

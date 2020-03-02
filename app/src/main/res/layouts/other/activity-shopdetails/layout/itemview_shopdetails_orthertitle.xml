@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/cb_shopdetails_orther_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/sort_bg_selector"
+        android:button="@null"
+        android:clickable="false"
+        android:paddingLeft="15dp"
+        android:text="新品推荐"
+        android:textColor="@color/sort_tv_selector"/>
+
+</LinearLayout>

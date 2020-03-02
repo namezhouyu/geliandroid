@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF1F1F1"
+                android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <com.geli.m.coustomview.PasswordInputView
+        android:id="@+id/piv_unbin_inputpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="20dp"
+        android:cursorVisible="false"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="6"
+        android:minWidth="300dp"
+        android:singleLine="true"
+        app:pivBorderColor="#cccccc"
+        app:pivBorderRadius="2dp"
+        app:pivBorderWidth="1dp"
+        app:pivOutBorderColor="@color/specifitext_color"
+        app:pivPasswordColor="@color/black"
+        app:pivPasswordLength="6"
+        app:pivPasswordWidth="5dp"
+        app:pivSplitLineWidth="1dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_above="@id/piv_unbin_inputpass"
+              android:layout_centerHorizontal="true"
+              android:text="@string/unbinbank_toast"
+    />
+</RelativeLayout>

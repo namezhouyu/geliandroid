@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.chihane:JDAddressSelector:1.1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a593de429d26b32e8007aaaccae366b0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a593de429d26b32e8007aaaccae366b0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.chihane/JDAddressSelector/1.1.4/793b56c17653ab19b50be8718d6d276b3e068e81/JDAddressSelector-1.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

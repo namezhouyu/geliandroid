@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/bt_logistics_message"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/first_btn_wuliu"
+            android:padding="5dp"
+            android:text="@string/logistics_transactions"
+            android:textColor="@color/text_color"/>
+
+        <Button
+            android:id="@+id/bt_notify_message"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/first_btn_tongzhi"
+            android:padding="5dp"
+            android:text="@string/notify_center"
+            android:textColor="@color/text_color"/>
+
+        <Button
+            android:id="@+id/bt_system_message"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/first_btn_gonggao"
+            android:padding="5dp"
+            android:text="@string/system_notify"
+            android:textColor="@color/text_color"/>
+    </LinearLayout>
+
+    <include layout="@layout/include_5dpline"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/erv_message_list"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

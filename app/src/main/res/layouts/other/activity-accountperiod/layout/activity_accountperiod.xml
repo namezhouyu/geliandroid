@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_shop_image_ap"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="93dp"
+                        android:layout_height="75dp"
+                        tool:background="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:id="@+id/tv_shop_name_ap"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/text_color"
+                        tool:text="xxx集团" />
+
+                </LinearLayout>
+
+                <com.geli.m.mvp.home.other.accountperiod_activity.MyRadioGroup
+                    android:id="@+id/rg_accountperiod"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_message_ap"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    android:textSize="14dp"
+                    tool:text="@string/settlement_within_xxx_days_of_order_delivery"/>
+
+                <include layout="@layout/include_1dpline"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_quota_ap"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:text="@string/adjust_the_amount"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="130dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_quota_ap"
+                            android:layout_width="60dp"
+                            android:layout_height="34dp"
+                            android:background="@color/transparent"
+                            android:inputType="number"
+                            android:gravity="center_vertical|right"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_color"
+                            tool:text=""/>
+
+                        <TextView
+                            android:id="@+id/tv_quota_unit_ap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_999999"
+                            android:text="000"/>
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:id="@+id/tv_max_quota_ap"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/zhusediao"
+                        android:text="@string/max_quota_message"/>
+                </LinearLayout>
+
+
+                <include layout="@layout/include_5dpline"/>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:text="@string/sign_a_contract"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="12dp"
+                            android:text="@string/downloading_contract"/>
+
+                        <Button
+                            android:id="@+id/btn_down_agreement_ap"
+                            android:layout_marginLeft="8dp"
+                            android:paddingRight="10dp"
+                            android:layout_width="200dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/selector_btn_bg_dowm"
+                            android:drawableRight="@mipmap/icon_xiazhai"
+                            android:textSize="12dp"
+                            android:textColor="@color/zhusediao"
+                            android:text="@string/contract_opening_contract"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/include_1dpline"/>
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="12dp"
+                        android:text="@string/upload_contract"/>
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_upload_agreement_ap"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="110dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/selector_btn_bg_upload"
+                            android:textColor="@color/text_999999"
+                            android:textSize="10dp"
+                            android:text="@string/upload_format" />
+
+                        <RelativeLayout
+                            android:id="@+id/lyout_upload_agreement_finish_ap"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_upload_agreement_finish_ap"
+                                android:layout_marginTop="10dp"
+                                android:paddingTop="15dp"
+                                android:drawablePadding="5dp"
+                                android:layout_width="110dp"
+                                android:layout_height="80dp"
+                                android:drawableTop="@drawable/icon_hetong"
+                                android:background="@drawable/selector_btn_bg_upload"
+                                android:gravity="center"
+                                android:textColor="@color/zhusediao"
+                                android:textSize="10dp"
+                                tool:text="xxx.jpg"/>
+
+                            <Button
+                                android:id="@+id/btn_upload_agreement_finish_delete_ap"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/btn_quxiao_nor" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_b4b4b4"
+                        android:textSize="11dp"
+                        android:text="@string/upload_audit"/>
+
+                    <TextView
+                        android:id="@+id/tv_operation_process_ap"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@drawable/selector_text_gray_blue"
+                        android:textSize="12dp"
+                        android:text="@string/operation_process"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_5dpline"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:text="@string/what_is_the_account_period" />
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_b4b4b4"
+                        android:textSize="12dp"
+                        android:text="@string/account_period" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_openup_or_submit_ap"
+                    android:layout_marginTop="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_btn_bg_red_gray_enabled"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    tool:text="@string/open_up_immediately"/>
+            </LinearLayout>
+
+        </ScrollView>
+        
+        <TextView
+            android:id="@+id/tv_toast_ap"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@color/bg_cce75d5d"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:text="@string/unavailable"
+            android:visibility="gone"
+            tool:visibility="visible"/>
+    </RelativeLayout>
+
+</LinearLayout>

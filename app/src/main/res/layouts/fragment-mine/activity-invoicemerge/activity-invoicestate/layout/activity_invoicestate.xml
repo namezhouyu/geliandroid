@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:id="@+id/layout_state_activityInvoiceState"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@color/zhusediao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/title_bar_height"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_state_activityInvoiceState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_tijiaochenggong80_white"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/successful_booking"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_invoice_info_activityInvoiceState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="135dp"
+        android:background="@drawable/shape_white_bg">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cLayout_invoice_info_activityInvoiceState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_invoice_type_temp_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/text_b4b4b4"
+                android:textSize="14sp"
+                android:text="@string/invoice_type_2"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_type_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_invoice_type_temp_activityInvoiceState"
+                app:layout_constraintTop_toTopOf="@id/tv_invoice_type_temp_activityInvoiceState"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tool:text="xxx"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_company_temp_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_invoice_type_temp_activityInvoiceState"
+                app:layout_constraintTop_toBottomOf="@id/tv_invoice_type_temp_activityInvoiceState"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_b4b4b4"
+                android:textSize="14sp"
+                android:text="@string/invoice_company"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_company_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_invoice_company_temp_activityInvoiceState"
+                app:layout_constraintTop_toTopOf="@id/tv_invoice_company_temp_activityInvoiceState"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tool:text="xxx"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_time_temp_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_invoice_type_temp_activityInvoiceState"
+                app:layout_constraintTop_toBottomOf="@id/tv_invoice_company_temp_activityInvoiceState"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_b4b4b4"
+                android:textSize="14sp"
+                android:text="@string/invoice_time"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_time_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_invoice_time_temp_activityInvoiceState"
+                app:layout_constraintTop_toTopOf="@id/tv_invoice_time_temp_activityInvoiceState"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tool:text="xxx"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cLayout_invoice_addr_activityInvoiceState"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_invoice_receiver_temp_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/text_b4b4b4"
+                android:textSize="14sp"
+                android:text="@string/invoice_receiver"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_receiver_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_invoice_receiver_temp_activityInvoiceState"
+                app:layout_constraintTop_toTopOf="@id/tv_invoice_receiver_temp_activityInvoiceState"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tool:text="xxx"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_address_temp_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_invoice_receiver_temp_activityInvoiceState"
+                app:layout_constraintTop_toBottomOf="@id/tv_invoice_receiver_temp_activityInvoiceState"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_b4b4b4"
+                android:textSize="14sp"
+                android:text="@string/invoice_address"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_address_activityInvoiceState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_invoice_address_temp_activityInvoiceState"
+                app:layout_constraintTop_toTopOf="@id/tv_invoice_address_temp_activityInvoiceState"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tool:text="xxx"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_invoice_list_activityInvoiceState"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_down_invoice_activityInvoiceState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_invoice_info_activityInvoiceState"
+        app:scrollbars="none"/>
+
+    <Button
+        android:id="@+id/btn_down_invoice_activityInvoiceState"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/selector_btn_bg_red_gray_enabled"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/download_invoice"
+        android:visibility="gone"/>
+</android.support.constraint.ConstraintLayout>

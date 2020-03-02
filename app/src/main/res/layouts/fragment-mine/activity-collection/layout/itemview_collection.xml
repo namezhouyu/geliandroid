@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cv_item_wonrecom"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/shadow_radius2">
+
+            <ImageView
+                android:id="@+id/iv_itemview_coll_shopimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_itemview_coll_shopname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" tools:text="名字"/>
+
+            <Button
+                android:id="@+id/bt_itemview_coll_entershop"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/borderred1dp_12r_shap"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/enter_shop"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nsv_itemview_coll"
+                android:layout_below="@id/tv_itemview_coll_shopname"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/bt_itemview_coll_entershop">
+
+                <TextView android:id="@+id/tv_itemview_coll_setfrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"/>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

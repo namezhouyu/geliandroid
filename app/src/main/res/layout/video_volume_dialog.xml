@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:background="@color/zhusediao">
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/video_dialog_bg"
+        android:gravity="center" android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginBottom="21dp"
+                  android:text="@string/volume"
+                  android:textColor="@color/white"
+                  android:textSize="18sp"
+                  android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/video_volume_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/icon_yinliang"/>
+        <ProgressBar
+            android:id="@+id/volume_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:progressDrawable="@drawable/video_new_seekbar_progress"/>
+
+    </LinearLayout>
+
+</LinearLayout>

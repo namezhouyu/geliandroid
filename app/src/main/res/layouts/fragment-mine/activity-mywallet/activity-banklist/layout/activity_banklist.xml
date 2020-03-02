@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <com.jude.easyrecyclerview.EasyRecyclerView android:id="@+id/erv_bank_list"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="#FFF1F1F1"
+                                                app:scrollbars="none"></com.jude.easyrecyclerview.EasyRecyclerView>
+    <RelativeLayout android:id="@+id/rl_banklist_bottom"
+                    android:layout_width="match_parent" android:layout_height="49dp">
+        <TextView android:id="@+id/tv_banklist_bottom" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:drawableLeft="@drawable/btn_jiahao"
+                  android:drawablePadding="5dp"
+                  android:text="@string/add_bank"
+                  android:textColor="@color/zhusediao"
+                  android:textSize="18sp"
+                  android:textStyle="bold"/>
+    </RelativeLayout>
+</LinearLayout>

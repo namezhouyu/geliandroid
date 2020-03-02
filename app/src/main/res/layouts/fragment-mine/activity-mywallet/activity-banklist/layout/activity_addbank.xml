@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:background="@color/backgroundColor"
+              android:paddingBottom="12dp"
+              android:paddingLeft="15dp"
+              android:paddingTop="12dp"
+              android:text="@string/verified"
+              android:textSize="16sp"/>
+    <LinearLayout android:id="@+id/ll_addbank_info"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:orientation="horizontal"
+                  android:paddingBottom="10dp"
+                  android:paddingTop="10dp">
+        <CheckBox android:id="@+id/cb_addbank_userinfo" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:background="@null"
+                  android:button="@null"
+                  android:drawableLeft="@drawable/cb_dayuan_selector"
+                  android:drawablePadding="5dp"
+                  android:textSize="12sp"
+                  tools:text="名字     440124123512351235"/>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp">
+        <TextView android:id="@+id/tv_addbank_cardholder_name" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/cardholder_name"/>
+        <ImageView android:id="@+id/iv_addbank_toast" android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/btn_xiaowenhao"
+                   android:visibility="gone"/>
+        <EditText android:id="@+id/et_addbank_name" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_addbank_cardholder_name"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:hint="@string/hint_pleaseinputname"
+                  android:imeOptions="actionNext"
+                  android:paddingBottom="5dp"
+                  android:paddingTop="10dp" android:singleLine="true"
+                  android:textSize="14sp"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp">
+        <TextView android:id="@+id/tv_addbank_idcard" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/idcard"/>
+        <EditText android:id="@+id/et_addbank_idnumber" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_addbank_idcard"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:hint="@string/hint_pleaseinputidnumber"
+                  android:imeOptions="actionNext" android:paddingBottom="5dp"
+                  android:paddingTop="10dp"
+                  android:singleLine="true" android:textSize="14sp"/>
+    </RelativeLayout>
+    <Button android:id="@+id/bt_addbank_next" style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bgred_20r_shape"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+</LinearLayout>

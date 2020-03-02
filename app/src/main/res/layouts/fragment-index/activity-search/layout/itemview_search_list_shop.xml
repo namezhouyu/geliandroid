@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="15dp"
+              android:orientation="horizontal">
+    <RelativeLayout android:layout_width="110dp" android:layout_height="110dp"
+                    android:background="@drawable/shadow_radius2">
+        <ImageView android:id="@+id/iv_itemview_shopsearch_list_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:src="@drawable/img_shenzhen"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp">
+        <TextView android:id="@+id/tv_itemview_shopsearch_list_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/text_color"
+                  tools:text="批零中心"/>
+        <TextView android:id="@+id/tv_itemview_shopsearch_list_setfrom"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_itemview_shopsearch_list_name"
+                  android:layout_marginTop="10dp"
+                  android:textSize="10sp"
+                  tools:text="起订"/>
+        <TextView android:id="@+id/tv_itemview_shopsearch_list_sold"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_itemview_shopsearch_list_setfrom"
+                  android:layout_marginTop="5dp"
+                  android:textColor="#efcf4e"
+                  android:textSize="10sp"
+                  tools:text="已售"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                       android:layout_gravity="center_horizontal" android:layout_marginTop="20dp"
+                       android:background="@color/zhusediao"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginTop="10dp"
+                      android:text="名字"
+                      android:textSize="16sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginBottom="20dp"
+                      android:layout_marginTop="5dp"
+                      android:text="交易状态"
+                      android:textColor="@color/specifitext_color"
+                      android:textSize="12sp"/>
+            <include layout="@layout/include_1dpline"></include>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/linegray1dp_bottom_list"
+                          android:orientation="horizontal"
+                          android:paddingBottom="18dp"
+                          android:paddingRight="15dp"
+                          android:paddingTop="18dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/amount"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/main_line_money"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/linegray1dp_bottom_list"
+                          android:orientation="horizontal"
+                          android:paddingBottom="18dp"
+                          android:paddingRight="15dp"
+                          android:paddingTop="18dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/pay_method"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/wechat_pay"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/linegray1dp_bottom_list"
+                          android:orientation="horizontal"
+                          android:paddingBottom="18dp"
+                          android:paddingRight="15dp"
+                          android:paddingTop="18dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/goods_des"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/wechat_pay"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/linegray1dp_bottom_list"
+                          android:orientation="horizontal"
+                          android:paddingBottom="18dp"
+                          android:paddingRight="15dp"
+                          android:paddingTop="18dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/shipping_address1"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/wechat_pay"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="15dp"
+                          android:orientation="horizontal"
+                          android:paddingRight="15dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/order_number1"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/wechat_pay"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="10dp"
+                          android:orientation="horizontal"
+                          android:paddingRight="15dp">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginLeft="15dp"
+                          android:text="@string/pay_time"
+                          android:textColor="@color/specifitext_color"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:gravity="right"
+                          android:text="@string/wechat_pay"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

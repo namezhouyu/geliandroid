@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rb_item_VHMenuSortChild"
+    android:layout_width="70dp"
+    android:layout_height="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:button="@null"
+    android:background="@drawable/selector_sort_checked_item"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:textColor="@color/selector_sort_checked_item_text"
+    android:textSize="12sp"
+    tools:text="xx属性"/>
+

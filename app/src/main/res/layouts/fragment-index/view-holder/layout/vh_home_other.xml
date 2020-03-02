@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/tv_other_HomeOtherVH"
+        style="@style/MyButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/middle_btn_pingling"
+        android:text="@string/piling_center"
+        android:textColor="#2e2e2e"
+        android:textSize="10sp"/>
+
+</android.support.constraint.ConstraintLayout>

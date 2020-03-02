@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/please_input_newpaypass"
+        android:textColor="@color/specifitext_color"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shadow_radius4">
+
+        <com.geli.m.coustomview.PasswordInputView
+            android:layout_width="match_parent"
+            android:id="@+id/piv_paypasssetting"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:cursorVisible="false"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="6"
+            android:minWidth="300dp"
+            android:maxLines="1"
+            app:pivBorderColor="#cccccc"
+            app:pivBorderRadius="2dp"
+            app:pivBorderWidth="0dp"
+            app:pivOutBorderColor="@color/white"
+            app:pivPasswordColor="@color/black"
+            app:pivPasswordLength="6"
+            app:pivPasswordWidth="5dp"
+            app:pivSplitLineWidth="0.5dp"/>
+    </RelativeLayout>
+
+    <Button
+        style="@style/MyButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/bt_paypasssetting_submit"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:text="@string/submit"
+        android:textColor="@color/white"/>
+</LinearLayout>

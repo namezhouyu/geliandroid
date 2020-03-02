@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.geli.m.coustomview.SelectLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cb_itemview_address_select"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:button="@null"
+        android:drawableRight="@drawable/cb_xiaoyuan_selector"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bgwhite_2r_shape"
+        android:paddingBottom="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_itemview_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名字"/>
+
+            <TextView android:id="@+id/tv_itemview_address_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_itemview_address_name"
+                android:layout_marginTop="10dp"
+                android:text="@string/phone"/>
+
+            <TextView
+                android:id="@+id/tv_itemview_address_isdefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/borderred1dp_2r_shap"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:text="@string/default_address"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_itemview_address_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_itemview_address_phone"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/tv_itemview_address_isdefault"
+                android:text="@string/shipping_address"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_itemview_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginRight="-5dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_biaoji_nor"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</com.geli.m.coustomview.SelectLayout>

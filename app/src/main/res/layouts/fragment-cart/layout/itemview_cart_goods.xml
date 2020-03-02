@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.geli.m.coustomview.SwipeDeleteItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sdi_itemview_cart_goods_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--android:drawableLeft="@drawable/cb_xiaoyuan_selector"-->
+
+        <LinearLayout
+            android:id="@+id/layout_itemview_cart_goods_goodscheck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/cb_itemview_cart_goods_goodscheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="7dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/cb_xiaoyuan_selector"
+                android:button="@null"
+                android:textSize="8dp"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                tools:text=""/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_itemview_cart_goods_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/shadow_radius2" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_itemview_cart_goods_normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    tools:text="名字"/>
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_specifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_itemview_cart_goods_name"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/specifitext_color"
+                    android:textSize="12sp"
+                    tools:text="规格"/>
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_taste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_itemview_cart_goods_specifi"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/specifitext_color"
+                    android:textSize="12sp"
+                    tools:text="口味"/>
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/overseas_list_money"
+                    android:textColor="@color/zhusediao"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_itemview_cart_goods_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:src="@drawable/btn_biaoji_nor"/>
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_sh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/iv_itemview_cart_goods_edit"
+                    android:background="@drawable/selector_bg_red_gray_enabled"
+                    android:gravity="center"
+                    android:text="@string/account"
+                    android:textColor="@drawable/selector_text_red_gray"
+                    android:textSize="10sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_goodsnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/buy_goods_number"
+                    android:textColor="@color/specifitext_color"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_itemview_cart_goods_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/bt_itemview_cart_goods_editcomplete"
+                    style="@style/MyButton"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bgred_2r_shape"
+                    android:text="@string/complete"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/iv_itemview_cart_goods_edit_numbercut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/btn_biaojijianhao_nor50"/>
+
+                <ImageView
+                    android:id="@+id/iv_itemview_cart_goods_edit_numberadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/bt_itemview_cart_goods_editcomplete"
+                    android:src="@drawable/btn_biaojijiahao_nor50"/>
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_itemview_cart_goods_edit_goodsnumber"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_toLeftOf="@id/iv_itemview_cart_goods_edit_numberadd"-->
+                    <!--android:layout_toRightOf="@id/iv_itemview_cart_goods_edit_numbercut"-->
+                    <!--android:background="@drawable/bordergray05dp_2r_shape"-->
+                    <!--android:gravity="center"-->
+                    <!--android:imeOptions="actionDone"-->
+                    <!--android:inputType="number"-->
+                    <!--android:maxLength="9"-->
+                    <!--android:text="12"-->
+                    <!--android:textSize="14sp"/>-->
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_edit_goodsnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/iv_itemview_cart_goods_edit_numberadd"
+                    android:layout_toRightOf="@id/iv_itemview_cart_goods_edit_numbercut"
+                    android:background="@drawable/bordergray05dp_2r_shape"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:text="12"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_itemview_cart_goods_edit_specifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/iv_itemview_cart_goods_edit_numbercut"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/bt_itemview_cart_goods_editcomplete"
+                    android:background="@drawable/bordergray05dp_2r_shape"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/specifitext_color"
+                    tools:text="规格"/>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/include_smallcart_delete"></include>
+</com.geli.m.coustomview.SwipeDeleteItem>

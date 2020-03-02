@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#E10000</color>
+    <color name="backgroundColor">#f2f2f2</color>
+    <color name="zhusediao">#e75d5d</color>
+    <color name="et_hint_color">#b4b4b4</color>
+    <color name="et_bottom_color">#858585</color>
+    <color name="getcode_tv_color">#858585</color>
+    <color name="line_color">#f1f1f1</color>
+    <color name="line_color_999999">#999999</color>
+    <color name="text_color">#2e2e2e</color>
+    <color name="specifitext_color">#b4b4b4</color>
+    <color name="location_specifitext_color">#d8d8d8</color>
+    <color name="erv_goodstitle_bgcolor">#f1f1f1</color>
+    <color name="transparent">#00000000</color>
+    <color name="progress">#efcf4e</color>
+    <color name="transparent50">#80000000</color>
+
+    <color name="et_aftermarket">#CCCCCC</color>
+
+    <color name="text_999999">#999999</color>
+    <color name="text_666666">#666666</color>
+    <color name="text_333333">#333333</color>
+    <color name="text_f2f2f2">#f2f2f2</color>
+    <color name="text_e75d5d">#E75D5D</color>
+    <color name="text_d9d9d9">#D9D9D9</color>
+    <color name="text_b4b4b4">#b4b4b4</color>
+    <color name="text_f36a6a">#F36A6A</color>
+    <color name="text_ed6a6a">#ED6A6A</color>
+
+    <color name="text_5de7a8">#5DE7A8</color>
+    <color name="text_49b950">#49B950</color>
+    <color name="text_5d9ee7">#5D9EE7</color>
+
+    <color name="bg_e5e5e5">#E5E5E5</color>
+    <color name="bg_f2f2f2">#F2F2F2</color>
+    <color name="bg_bbbbbb">#BBBBBB</color>
+    <color name="bg_999999">#999999</color>
+    <color name="bg_333333">#333333</color>
+    <color name="bg_cccccc">#cccccc</color>
+    <color name="bg_dddddd">#dddddd</color>
+    <color name="bg_cce75d5d">#CCE75D5D</color>
+    <color name="bg_fff5e6">#FFF5E6</color>
+    <color name="bg_66ffffff">#66FFFFFF</color>
+    <color name="bg_f8f8f8">#f8f8f8</color>
+    <color name="bg_662e2e2e">#662e2e2e</color>
+
+    <color name="bg_fba7a7">#FBA7A7</color>
+
+    <color name="transparent123">#00ffffff</color>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_restaurant_restaurantListActivity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_title_back_restaurantListActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:src="@drawable/nav_btn_fanhui"/>
+
+            <TextView
+                android:id="@+id/tv_title_name_restaurantListActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="#2e2e2e"
+                android:textSize="16sp"
+                tool:text="标题"/>
+
+            <TextView
+                android:id="@+id/tv_title_right_restaurantListActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/nav_btn_sousuo"
+                android:padding="5dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_location_restaurantListActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:ellipsize="middle"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/icon_shouhuodizi"
+        android:drawableRight="@drawable/first_btn_jinru"
+        android:singleLine="true"/>
+
+    <include layout="@layout/include_restaurantlist_select"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_list_restaurantListActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:scrollbars="none"/>
+
+</LinearLayout>

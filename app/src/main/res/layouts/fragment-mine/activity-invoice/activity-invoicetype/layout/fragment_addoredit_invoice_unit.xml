@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_unitinvoice_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rb_unitinvoice_vatdedicated"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_unitinvoice_vatdedicated"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1" android:button="@null"
+            android:gravity="center"
+            android:text="@string/invoice_VATdedicatedinvoice"
+            android:textColor="@color/tv_invoice_selector"/>
+
+        <RadioButton
+            android:id="@+id/rb_unitinvoice_vatordinary"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1" android:button="@null"
+            android:gravity="center"
+            android:text="@string/invoice_VATordinaryinvoice"
+            android:textColor="@color/tv_invoice_selector"/>
+    </RadioGroup>
+
+    <include layout="@layout/include_1dpline"/>
+
+    <RadioGroup
+        android:id="@+id/rg_unitinvoice_vatordinary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rb_unitinvoice_pagerinvoice"
+        android:orientation="horizontal"
+        android:paddingLeft="50dp"
+        tools:ignore="RtlSymmetry">
+
+        <RadioButton
+            android:id="@+id/rb_unitinvoice_pagerinvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_dayuan_selector"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/invoice_pagerinvoice"
+            android:textSize="12sp"/>
+        <RadioButton
+            android:id="@+id/rb_unitinvoice_electronic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_dayuan_selector"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/invoice_electronicinvoice"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/linegray05dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_unitinvoice_name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addinvoice_unitname"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_unitinvoice_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/addinvoice_hintname"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/linegray05dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_unitinvoice_unitnumber"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addinvoice_unitnumber"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_unitinvoice_unitnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/addinvoice_hintunitnumber"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/linegray05dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_unitinvoice_unitaddress"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addinvoice_unitaddress"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_unitinvoice_unitaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/addinvoice_hintunitaddress"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_unitinvoice_vatordinary_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/linegray05dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_unitinvoice_email"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addinvoice_emailaddress"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_unitinvoice_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/addinvoice_hintemail"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_unitinvoice_vatdedicated_orther_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/linegray05dp_bottom_list"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView android:id="@+id/tv_unitinvoice_unitbankname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addinvoice_unitbankname"
+                        android:textSize="12sp"/>
+
+                    <EditText android:id="@+id/et_unitinvoice_unitbankname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/addinvoice_hintunitbankname"
+                        android:singleLine="true"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/linegray05dp_bottom_list"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_unitinvoice_unitbanknumber"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addinvoice_unitbanknumber"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_unitinvoice_unitbanknumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/addinvoice_hintunitbanknumber"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/linegray05dp_bottom_list"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_unitinvoice_unitphone"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addinvoice_unitphone"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_unitinvoice_unitphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/addinvoice_hintunitphone"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/linegray05dp_bottom_list"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_unitinvoice_zipcode"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addinvoice_zipcode"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_unitinvoice_zipcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/addinvoice_hintzipcode"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/invoice_uploadbusinesslicense"
+                android:textSize="12sp"/>
+
+            <FrameLayout
+                android:id="@+id/fl_unitinvoice_selectimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-5dp"/>
+
+            <Button
+                android:id="@+id/bt_unitinvoice_save"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bgred_20r_shape"
+                android:paddingLeft="38dp"
+                android:paddingRight="38dp"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

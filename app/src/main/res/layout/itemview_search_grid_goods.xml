@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_radius2"
+                android:padding="5dp">
+    <ImageView android:id="@+id/iv_itemview_goodssearch_grid_img" android:layout_width="160dp"
+               android:layout_height="160dp"
+               android:layout_centerHorizontal="true"
+               android:padding="5dp"
+               tools:background="@drawable/default_logo"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/iv_itemview_goodssearch_grid_img"
+              android:layout_marginTop="5dp"
+              android:ellipsize="end"
+              android:maxEms="6"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:textColor="@color/text_color"
+              android:textSize="14sp"
+              tools:text="思念2.5kg光汤包"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_spectifi"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_goodssearch_grid_name"
+              android:layout_marginTop="10dp"
+              android:maxEms="10"
+              android:singleLine="true"
+              android:textColor="@color/specifitext_color"
+              android:textSize="10sp"
+              tools:text="规格:300g*50包/件;500g*50包"/>
+    <TextView android:id="@+id/tv_itemview_grid_money" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_goodssearch_grid_spectifi"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/zhusediao"
+              android:textSize="12sp"
+              tools:text="$xxx"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            tools:text="title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv_video_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@color/zhusediao"
+                app:riv_corner_radius="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_video_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                tools:text="@string/nickname"/>
+
+            <TextView
+                android:id="@+id/tv_video_viewnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                tools:text="浏览次数()"/>
+
+            <CheckBox
+                android:id="@+id/cb_video_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/cb_like_small_selector"
+                android:drawablePadding="2dp"
+                android:textColor="@color/zhusediao"
+                android:textSize="10sp"
+                tools:text="(1000)"/>
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/wv_video_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include layout="@layout/include_5dpline"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_video_goodsroot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/iv_video_goods_img"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/img_loading"/>
+
+            <TextView
+                android:id="@+id/tv_video_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_video_goods_img"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"
+                tools:text="@string/overseas_list_money"/>
+
+            <TextView
+                android:id="@+id/tv_video_goods_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_video_goods_img"
+                android:textSize="14sp"
+                tools:text="title"/>
+
+            <TextView
+                android:id="@+id/tv_video_goods_mess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_video_goods_title"
+                android:layout_below="@id/tv_video_goods_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/specifitext_color"
+                android:textSize="10sp"
+                tools:text="title"/>
+
+            <Button
+                android:id="@+id/bt_video_goods_checkdetails"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/borderred1dp_15r_shap"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:text="@string/check_details"
+                android:textColor="@color/zhusediao"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/include_5dpline"/>
+
+        <LinearLayout
+            android:id="@+id/ll_video_related_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_video_related_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/title_related_video"/>
+
+            <com.geli.m.coustomview.MyEasyRecyclerView
+                android:id="@+id/erv_video_related_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                app:scrollbars="none"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_test_left_bigtitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="asdf">
+    </TextView>
+    <com.jude.easyrecyclerview.EasyRecyclerView android:id="@+id/erv_shopdetails_sorttitle_list"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"></com.jude.easyrecyclerview.EasyRecyclerView>
+</LinearLayout>

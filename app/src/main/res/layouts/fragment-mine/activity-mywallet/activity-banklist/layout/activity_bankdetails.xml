@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <ImageView android:id="@+id/iv_bankdetails_img" android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_gravity="center_horizontal" android:layout_marginTop="20dp"
+               tools:background="@color/zhusediao"
+    />
+    <TextView android:id="@+id/tv_bankdetails_bankname" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              android:textSize="16sp"
+              tools:text="名字"/>
+    <TextView android:id="@+id/tv_bankdetails_bankinfo" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginBottom="20dp"
+              android:layout_marginTop="5dp"
+              android:textColor="@color/specifitext_color"
+              android:textSize="12sp"
+              tools:text="信息"/>
+    <include layout="@layout/include_1dpline"></include>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="150dp" android:layout_height="wrap_content"
+                  android:text="@string/name"/>
+        <TextView android:id="@+id/tv_bankdetails_name" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  tools:text="名字"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="150dp" android:layout_height="wrap_content"
+                  android:text="@string/bank_phone"/>
+        <TextView android:id="@+id/tv_bankdetails_phone" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  tools:text="123123123"/>
+    </LinearLayout>
+    <Button android:id="@+id/bt_bankdetails_unbin" style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bgred_20r_shape"
+            android:text="@string/unbind"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+</LinearLayout>

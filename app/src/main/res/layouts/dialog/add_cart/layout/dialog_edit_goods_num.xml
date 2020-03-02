@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/dialog_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bgwhite_20r_shape"
+        android:layout_margin="20dp">
+
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_goods_number"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/et_number_DialogEditGoodsNum"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            android:inputType="number"
+            android:maxLength="6"
+            android:gravity="center"
+            android:textColor="@color/zhusediao"
+            android:textSize="15sp"
+            android:background="@drawable/borderred1dp_2r_shap"/>
+
+        <ImageView
+            android:id="@+id/iv_add_DialogEditGoodsNum"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/et_number_DialogEditGoodsNum"
+            app:layout_constraintStart_toEndOf="@id/et_number_DialogEditGoodsNum"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/btn_jiahao_nor50"/>
+
+        <ImageView
+            android:id="@+id/iv_cut_DialogEditGoodsNum"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/et_number_DialogEditGoodsNum"
+            app:layout_constraintEnd_toStartOf="@id/et_number_DialogEditGoodsNum"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/btn_jianhao_nor50"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_btn_DialogEditGoodsNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel_DialogEditGoodsNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_white_gray_bottom_l_20r"
+                android:textSize="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/cancel"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#f1f1f1"/>
+
+            <Button
+                android:id="@+id/btn_confirm_DialogEditGoodsNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_red_red_bottom_r_20r"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:text="@string/determine"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toTopOf="@id/layout_btn_DialogEditGoodsNum"
+            android:background="#f1f1f1"/>
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

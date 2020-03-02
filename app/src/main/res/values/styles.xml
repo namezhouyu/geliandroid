@@ -1,0 +1,207 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="MyAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/text_color</item>
+
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="MyAppTheme">
+        <item name="android:windowIsTranslucent">true</item>   <!--透明-->
+        <item name="android:windowNoTitle">true</item>         <!--没有标题-->
+        <item name="android:windowFullscreen">true</item>      <!--铺满，没状态栏的-->
+    </style>
+
+    <style name="MyButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>　　　　　　
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--<item name="android:windowFullscreen">true</item> -->
+    <style name="FuturesDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MyDialogStyleWhiteBg">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>　　　　　　
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DownloadInvoiceDialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <declare-styleable name="ShapeImageView">
+        <attr name="ml_border_color" format="color"/>
+        <attr name="ml_border_width" format="dimension"/>
+        <attr name="ml_press_alpha" format="integer"/>
+        <attr name="ml_press_color" format="color"/>
+        <attr name="ml_radius" format="dimension"/>
+        <attr name="ml_shape_type" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="rectangle" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MaxHeightView">
+        <attr name="mhv_HeightRatio" format="reference|float"/>
+        <attr name="mhv_HeightDimen" format="reference|dimension"/>
+    </declare-styleable>
+    <declare-styleable name="LogisticsDetailsRound">
+        <attr name="ldr_maxradius" format="dimension"/>
+        <attr name="ldr_minradius" format="dimension"/>
+        <attr name="ldr_lineheight" format="dimension"/>
+        <attr name="ldr_big_color" format="color"/>
+        <attr name="ldr_small_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="AfterSoldDetailsRound">
+        <attr name="asdr_maxradius" format="dimension"/>
+        <attr name="asdr_minradius" format="dimension"/>
+        <attr name="asdr_lineheight" format="dimension"/>
+        <attr name="asdr_big_color" format="color"/>
+        <attr name="asdr_small_color" format="color"/>
+    </declare-styleable>
+
+    <style name="commentListRatinBar" parent="android:Widget.DeviceDefault.RatingBar">
+        <item name="android:progressDrawable">@drawable/commentlist_xingxing</item>
+        <item name="android:minHeight">15dp</item>
+    </style>
+    <style name="goodsCommentRatinBar" parent="android:Widget.DeviceDefault.RatingBar">
+        <item name="android:progressDrawable">@drawable/goodscomment_xingxing</item>
+        <item name="android:minHeight">10dp</item>
+    </style>
+    <style name="commentRatinBar" parent="android:Widget.DeviceDefault.RatingBar">
+        <item name="android:progressDrawable">@drawable/comment_taoxin</item>
+        <item name="android:minHeight">12dp</item>
+    </style>
+
+    <!--白色主题样式，，注意每一项都不能少-->
+    <style name="picture.white.style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">@color/white</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">true</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@drawable/back2</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@drawable/orange_arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@drawable/orange_arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/black</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/black</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <!--开启图片列表勾选数字模式,开启的话勾选样式要换-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">true</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/color_fa</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/tab_color_false</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/tab_color_false</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/white</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/tab_color_false</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/bar_grey</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/bar_grey_90</item>
+        <!--预览界面状态栏颜色-->
+        <item name="picture.status.color">@color/bar_grey_90</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@drawable/picture_back</item>
+        <!--是否改变预览界面状态栏字体颜色为黑色-->
+        <item name="picture.preview.statusFontColor">false</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/bar_grey</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/bar_grey</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+    <style name="video_h_progressBar">
+        <item name="android:maxWidth">190dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/video_volume_progress_bg</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+    </style>
+
+
+    <style name="radiobutton_day" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/selector_text_black_white</item>
+    </style>
+
+    <style name="radiobutton_menu" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/selector_sort_checked_item_text</item>
+    </style>
+
+
+    <style name="confirm_text_staly_red_bold" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/zhusediao</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="confirm_text_staly_green_bold" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_5de7a8</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+    <!--快速滚动条-->
+    <attr name="fastscroll__style" format="reference" />
+    <declare-styleable name="fastscroll__fastScroller">
+        <attr name="fastscroll__handleColor" format="color" />
+    </declare-styleable>
+</resources>

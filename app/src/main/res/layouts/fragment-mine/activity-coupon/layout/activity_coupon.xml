@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/tv_coupon_clicknouse"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/click_nouse_coupon"
+            android:textColor="@color/zhusediao"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <com.geli.m.coustomview.MyTabLayout
+            android:id="@+id/mtl_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_coupon_tab_canuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/coupon_nouse"/>
+
+                <TextView
+                    android:id="@+id/tv_coupon_tab_cannotuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/coupon_isuse"/>
+
+                <TextView android:id="@+id/tv_coupon_tab_expired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/expired_coupon"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_indicator"></include>
+
+        </com.geli.m.coustomview.MyTabLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_coupon_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

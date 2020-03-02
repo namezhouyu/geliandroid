@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_smallcart_details_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="49dp"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/ll_smallcart_goods_rootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/ll_smallcart_goods_toplayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/smallcart_goodslist"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_smallcart_goods_selectinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(已选11件,共5.5kg)"
+                    android:textColor="@color/specifitext_color"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_itemview_smallcart_clearcart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_xiaolaji_nor"
+                    android:text="@string/clert_cart"
+                    android:textColor="@color/specifitext_color"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv_smallcart_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:scrollbars="none"/>
+
+    </LinearLayout>
+</RelativeLayout>

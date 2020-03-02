@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <TextView
+        android:id="@+id/tv_getcode_mess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_getcode_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:text="13726595135"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <com.geli.m.coustomview.VerificationCodeInput
+            android:id="@+id/VerificationCodeInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:box="4"
+            app:box_bg_focus="@drawable/border2e1dp_bgwhite_2r_shape"
+            app:box_bg_normal="@drawable/borderb41dp_bgwhite_2r_shape"
+            app:child_h_padding="25dp"
+            app:child_height="45dp"
+            app:child_width="45dp"
+            app:inputType="number"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_getcode_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_code"
+                android:textColor="@color/zhusediao"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_getcode_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/countdown"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_getcode_tiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="52S"
+                    android:textColor="@color/zhusediao"
+                    android:textStyle="bold"
+                    tool:text="getcode"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

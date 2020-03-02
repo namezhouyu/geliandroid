@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.geli.m">
+
+
+    <!-- Required -->
+    <uses-permission android:name="com.geli.m.permission.JPUSH_MESSAGE"
+                     android:protectionLevel="signature"/>
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- 用于打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 获取ActivityManager需要的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 在sdcard中创建/删搜索除文件的权限-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 在sdcard中创建/删搜索除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 从sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- ############################### -->
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--8.0以上的需要这个权限安装apk-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <!-- ############################### -->
+    <application
+        android:name=".app.GlobalData"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme"
+        tools:replace="Android:icon, android:theme">
+        <activity android:name=".ui.activity.SplashScreenActivity"
+                  android:screenOrientation="portrait"
+                    android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.home.other.login_register_activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--singleTask-->
+        <!--如果要启动的Activity在当前栈内启动，activity只会在任务栈里面存在一个实例。-->
+        <!--如果要激活的activity，在任务栈里面已经存在，就不会创建新的activity，-->
+        <!--而是复用这个已经存在的activity，调用 onNewIntent() 方法，并且清空这个activity任务栈上面所有的activity。-->
+        <activity android:name=".mvp.home.main.HomeActivity"
+                    android:configChanges="orientation|screenSize"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="gelifood">
+                </data>
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.scan_activity.ScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mvp.home.other.WebViewActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.activity.AllCommentActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.recharge_activity.ReportShopActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.retailcenter_activity.RetailCenterActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.overseas_activity.OverseasActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.search_activity.SearchActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".mvp.home.other.shopdetails_activity.ShopDetailsActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".mvp.home.other.submitorder_activity.main.SubmitOrderActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.other.goodsdetails_activity.GoodsDetailsActivity"
+            android:hardwareAccelerated="true"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.invoice_activity.invoicetype_activity.InvoiceTypeActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.coupon_activity.CouponManagerActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.address_activity.AddressActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.goodscomment_activity.GoodsCommentActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.invoice_activity.invoicetype_activity.addoreditinvoice_activity.AddOrEditInvoiceActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.MyOrderActivity" android:launchMode="singleTask"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.orderdetails_activity.OrderDetailsActivity" android:launchMode="singleTask"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.address_activity.addaddress_activity.AddEditAddressActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.activity.ShowImageActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.main.MyWalletActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.helpcenter_activity.HelpCenterActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.activity.RechargeActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.banklist_activity.BankListActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.banklist_activity.addbank_activity.bind.BindBankActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.message_activity.MessageActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.banklist_activity.unbinbank_activity.UnBinBankActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.banklist_activity.bankdetails_activity.BankDetailsActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.withdraw_activity.WithdrawActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.setting_activity.SettingActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.activity.LineDownSubmitOrderSuccessActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.uploadcertificate_activity.UploadCertificateActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.member_activity.MemberCenterActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.personinfo_activity.PersonInfoModifyActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.location_activity.LocationActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.setting_activity.getcode_activity.loginpass_activity.LoginPassSettingActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.location_activity.SelectionAreaActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.setting_activity.getcode_activity.GetCodeActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.expensesrecord_activity.ExpensesDetailsActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.expensesrecord_activity.ExpensesRecordActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.setting_activity.getcode_activity.paypass_activity.PayPassSettingActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.logisticsdetails_activity.LogisticsDetailsActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.other.pay_activity.OrderPaySuccessActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.find_fragment.findlist_fragment.details.ArticleDetailsActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.feedback_activity.FeedbackActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.mywallet_activity.banklist_activity.addbank_activity.AddBankActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.index_fragment.message_activity.MessActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.collection_activity.CollectionActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".select.PictureSelectorActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".select.MyPictureExternalPreviewActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".mvp.home.find_fragment.findlist_fragment.details.VideoDetailsActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.aftersold_activity.AfterSoldActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mvp.home.mine_fragment.myorder_activity.myorder_fragment.aftersolddetails_activity.AfterSoldDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--账期-->
+        <activity android:name=".mvp.home.other.accountperiod_activity.AccountPeriodActivity"
+            android:screenOrientation="portrait"/>
+        <!--账期购买 提升 -->
+        <activity android:name=".mvp.home.other.accountperiod_opened_activity.AccountPeriodOpenedActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 申请临时额度 -->
+        <activity android:name=".mvp.home.cart_fragment.tempaccountperiod_activity.TempAccountPeriodActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 账期管理 -->
+        <activity android:name=".mvp.home.mine_fragment.accountmanagement_activity.AccountManagementActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 账期订单详情 -->
+        <activity android:name=".mvp.home.mine_fragment.accountorder_activity.AccountOrderActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 支付界面 -->
+        <activity android:name=".mvp.home.other.pay_activity.PayActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 支付界面 -->
+        <activity android:name=".mvp.home.other.submitorder_activity.success.OrderSubmitSuccessActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 查看PDF -->
+        <activity android:name=".mvp.home.other.FileDisplayActivity"/>
+
+        <!-- 合并开票 -->
+        <activity android:name=".mvp.home.mine_fragment.invoicemerge_activity.InvoiceMergeActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 进行合并的发票操作 -->
+        <activity android:name=".mvp.home.mine_fragment.invoicemerge_activity.invoicelist_activity.InvoiceListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 提交合并的发票 -->
+        <activity android:name=".mvp.home.mine_fragment.invoicemerge_activity.invoicelist_activity.subminInvoicemerge_activity.SubmitInvoiceMergeActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- 我的发票 -->
+        <activity android:name=".mvp.home.mine_fragment.invoice_activity.InvoiceActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 发票记录 -->
+        <activity android:name=".mvp.home.mine_fragment.invoice_activity.invoicerecord_activity.InvoiceRecordActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 发票状态 -->
+        <activity android:name=".mvp.home.mine_fragment.invoicemerge_activity.invoicestate_activity.InvoiceStateActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 新批发列表 -->
+        <activity android:name=".mvp.home.index_fragment.restaurantlist_activity.main.RestaurantListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 新批发 -->
+        <activity android:name=".mvp.home.index_fragment.restaurantlist_activity.main.restaurant_activity.RestaurantActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 新批发搜索 -->
+        <activity android:name=".mvp.home.index_fragment.restaurantlist_activity.main.restaurant_search_activity.RestaurantSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 转账支付 -->
+        <activity android:name=".mvp.home.other.transferaccounts_activity.TransferAccountsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 新批发详情 -->
+        <activity android:name=".mvp.home.index_fragment.restaurantlist_activity.main.restaurant_activity.restaurantinfo_activity.RestaurantInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 新批发搜索商品/商店 -->
+        <activity android:name=".mvp.home.index_fragment.restaurantlist_activity.main.restaurant_activity.r_search_activity.RSearchActivity"
+            android:screenOrientation="portrait"/>
+
+
+
+
+        <!-- 本地食品列表 -->
+        <activity android:name=".mvp.home.index_fragment.localrestaurantlist_activity.main.LocalRestaurantListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 本地食品 -->
+        <activity android:name=".mvp.home.index_fragment.localrestaurantlist_activity.main.local_restaurant_activity.LocalRestaurantActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 本地食品搜索 -->
+        <activity android:name=".mvp.home.index_fragment.localrestaurantlist_activity.main.local_restaurant_search_activity.LocalRestaurantSearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 本地食品详情 -->
+        <activity android:name=".mvp.home.index_fragment.localrestaurantlist_activity.main.local_restaurant_activity.local_restaurantinfo_activity.LocalRestaurantInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 本地食品搜索商品/商店 -->
+        <activity android:name=".mvp.home.index_fragment.localrestaurantlist_activity.main.local_restaurant_activity.lr_search_activity.LRSearchActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- 测试用网页控件 -->
+
+
+        <!-- ===================其他===================== -->
+        <!-- 高德地图 -->
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8a2be7d707022d40d49bd3cb6c202143"/>
+        <!-- ShareSDK 分享 -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <activity android:name="com.mob.tools.MobUIShell"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝 -->
+        <activity android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <!-- 微信 -->
+        <activity android:name=".wxapi.WXPayEntryActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:exported="true"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity android:name=".mvp.home.mine_fragment.browse_activity.BrowseActivity"/>
+        <service android:name="cn.jpush.android.service.PushService"
+                 android:process=":multiprocess"
+                 tools:node="replace">
+        </service>
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name=".broadcastreceiver.NotifyActionBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":multiprocess">
+            <intent-filter>
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <category android:name="com.geli.m"/>
+            </intent-filter>
+        </receiver>
+
+
+
+        <!--融云-->
+        <!--<provider-->
+        <!--android:name="android.support.v4.content.FileProvider"-->
+        <!--android:authorities="io.rong.imlib.FileProvider"-->
+        <!--android:exported="false"-->
+        <!--android:grantUriPermissions="true">-->
+        <!--<meta-data-->
+        <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--android:resource="@xml/rc_file_path"/>-->
+        <!--</provider>-->
+
+        <!--&lt;!&ndash; 融云对话 &ndash;&gt;-->
+        <!--<activity android:name=".ui.activity.conversation" android:screenOrientation="portrait">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW"/>-->
+        <!--<category android:name="android.intent.category.DEFAULT"/>-->
+        <!--<data-->
+        <!--android:host="com.geli.m"-->
+        <!--android:pathPrefix="/conversation/"-->
+        <!--android:scheme="rong"/>-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>

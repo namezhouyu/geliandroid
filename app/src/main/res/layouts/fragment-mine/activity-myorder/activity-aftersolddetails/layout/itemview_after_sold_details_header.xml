@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aftermarket_description" />
+
+
+        <TextView android:id="@+id/tv_itemview_coll_setfrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_after_sold_details_header_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/erv_goodstitle_bgcolor"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            tools:text="售后反馈问题" />
+
+
+        <FrameLayout
+            android:id="@+id/fl_after_sold_details_header_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:layout_marginLeft="-15dp" />
+    </LinearLayout>
+
+    <!--<include layout="@layout/include_5dpline"></include>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f2f2f2"
+        android:layout_marginBottom="10dp"/>
+
+
+</LinearLayout>

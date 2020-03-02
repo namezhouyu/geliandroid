@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_itemview_submitorder_shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="名字" />
+
+    <TextView
+        android:id="@+id/tv_itemview_submitorder_canuseconpon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/first_btn_jinru"
+        android:text="@string/can_use_couponnumber"
+        android:textSize="12sp"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_itemview_submitorder_goodslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemview_submitorder_shopname">
+
+    </com.jude.easyrecyclerview.EasyRecyclerView>
+
+    <TextView
+        android:id="@+id/tv_itemview_submitorder_buyermess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/erv_itemview_submitorder_goodslist"
+        android:layout_marginTop="15dp"
+        android:text="@string/buyer_message"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/et_itemview_submitorder_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/erv_itemview_submitorder_goodslist"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tv_itemview_submitorder_buyermess"
+        android:background="@null"
+        android:imeOptions="actionDone"
+        android:hint="@string/buyer_message1"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_submitorder_totalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_itemview_submitorder_message"
+        android:layout_marginTop="15dp"
+        android:text="@string/overseas_list_money"
+        android:textColor="@color/zhusediao"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_submitorder_totalnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_itemview_submitorder_message"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/tv_itemview_submitorder_totalprice"
+        android:text="@string/total_goods_number"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

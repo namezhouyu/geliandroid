@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+    <TextView android:id="@+id/tv_itemview_notify_notime_state"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/zhusediao" android:textSize="16sp"
+              android:textStyle="bold"
+              tools:text="title"/>
+
+    <FrameLayout android:id="@+id/fl_itemview_nofity_logistics_imglayout"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true">
+        <ImageView android:id="@+id/iv_itemview_notify_notime_img" android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:background="@color/zhusediao"/>
+    </FrameLayout>
+    <TextView android:id="@+id/tv_itemview_notify_notime_mess"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_notify_notime_state"
+              android:layout_marginRight="30dp"
+              android:layout_marginTop="10dp"
+              android:layout_toLeftOf="@id/fl_itemview_nofity_logistics_imglayout"
+              android:singleLine="true"
+              tools:text="mess"/>
+    <TextView android:id="@+id/tv_itemview_notify_notime_goods"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_notify_notime_mess"
+              android:layout_marginRight="30dp"
+              android:layout_marginTop="5dp"
+              android:layout_toLeftOf="@id/fl_itemview_nofity_logistics_imglayout"
+              android:singleLine="true"
+              android:textColor="@color/specifitext_color"
+              android:textSize="12sp"
+              tools:text="time"/>
+    <TextView android:id="@+id/tv_itemview_notify_notime_ordernumber"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_notify_notime_goods"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/specifitext_color"
+              android:textSize="12sp"
+              tools:text="订单号"/>
+    <TextView android:id="@+id/tv_itemview_notify_notime_time" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_below="@id/tv_itemview_notify_notime_goods"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/specifitext_color"
+              android:textSize="12sp"
+              tools:text="2.17"/>
+</RelativeLayout>

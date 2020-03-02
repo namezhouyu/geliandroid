@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_smallcart_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_smallcart_imglayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tab_btn_qingdan_nor"/>
+
+        <TextView
+            android:id="@+id/tv_itemview_smallcart_cartnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/borderblack1dp_8r_bgred_shape"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="14dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="2dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="8sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fl_smallcart_imglayout"
+        android:paddingTop="10dp">
+        <TextView
+            android:id="@+id/tv_smallcart_bottom_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="合计"
+            android:textColor="@color/text_color"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/tv_smallcart_bottom_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="@string/overseas_list_money"
+            android:textColor="@color/zhusediao"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/free_shipping"
+            android:textColor="@color/specifitext_color"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_smallcart_bootom_settlement"
+        style="@style/MyButton"
+        android:layout_width="90dp"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgred_lefttopbot2r_shape"
+        android:text="@string/settlement"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+</RelativeLayout>

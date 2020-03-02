@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+
+    <TextView
+        android:id="@+id/tv_shop_name_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="@color/text_color"
+        tool:text="尚冻冻食品有限公司"/>
+
+
+    <TextView
+        android:id="@+id/tv_flag_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_shop_name_vhInvoiceRecord"
+        app:layout_constraintBottom_toBottomOf="@id/tv_shop_name_vhInvoiceRecord"
+        android:layout_marginStart="2dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        tool:text="@string/invoice_merge_1"/>
+
+
+    <TextView
+        android:id="@+id/tv_state_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_shop_name_vhInvoiceRecord"
+        android:layout_marginEnd="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/zhusediao"
+        tool:text="@string/application"/>
+
+
+    <TextView
+        android:id="@+id/tv_time_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_shop_name_vhInvoiceRecord"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_name_vhInvoiceRecord"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        tool:text="2018.12.25 15.22.33"/>
+
+
+    <TextView
+        android:id="@+id/tv_type_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_time_vhInvoiceRecord"
+        app:layout_constraintTop_toBottomOf="@id/tv_time_vhInvoiceRecord"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        tool:text="@string/invoice_type_1"/>
+
+
+    <TextView
+        android:id="@+id/tv_price_vhInvoiceRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_type_vhInvoiceRecord"
+        app:layout_constraintTop_toBottomOf="@id/tv_type_vhInvoiceRecord"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        tool:text="@string/invoice_price_1"/>
+</android.support.constraint.ConstraintLayout>

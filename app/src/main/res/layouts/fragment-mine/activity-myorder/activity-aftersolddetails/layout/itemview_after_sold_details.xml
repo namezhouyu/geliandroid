@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:mytool="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.geli.m.coustomview.AfterSoldDetailsRound
+        android:id="@+id/ldr_itemview_after_sold_details_rount"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_height="wrap_content"
+        mytool:asdr_big_color="@color/zhusediao"
+        mytool:asdr_small_color="@color/specifitext_color"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_after_sold_details_mess"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ldr_itemview_after_sold_details_rount"
+        android:layout_alignParentTop="true"
+        tool:text="物流信息"
+        android:textColor="@color/text_color" />
+
+    <TextView
+        android:id="@+id/tv_itemview_after_sold_details_datetime"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ldr_itemview_after_sold_details_rount"
+        android:layout_below="@id/tv_itemview_after_sold_details_mess"
+        android:layout_alignLeft="@+id/tv_itemview_after_sold_details_mess"
+        android:textColor="@color/text_999999"
+        tool:text="2018-02-03 12:02:03"/>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_toRightOf="@id/ldr_itemview_after_sold_details_rount"
+        android:layout_alignBottom="@+id/ldr_itemview_after_sold_details_rount"
+        android:layout_marginBottom="10dp"
+        android:background="@color/specifitext_color"/>
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paymethod"
+        android:textColor="@color/text_color"/>
+
+    <com.geli.m.mvp.home.other.accountperiod_activity.MyRadioGroup
+        android:id="@+id/mrg_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_paymethod_geli_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/geliqianbao"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/geli_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_paymethod_transferAccounts_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector" android:button="@null"
+                android:drawableLeft="@drawable/icon_xianxia"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/transfer_accounts_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_paymethod_linedown_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector" android:button="@null"
+                android:drawableLeft="@drawable/icon_xianxia"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/linedown_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <RadioButton
+                android:id="@+id/rb_paymethod_weixin_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_weixin"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/wechat_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/rb_paymethod_alpay_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_zhifubao"
+                android:drawablePadding="5dp"
+                android:paddingLeft="15dp"
+                android:text="@string/ali_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/rb_paymethod_wallet_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/cb_paymethod_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_qianbao"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/wallet_pay"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+    </com.geli.m.mvp.home.other.accountperiod_activity.MyRadioGroup>
+
+
+</LinearLayout>

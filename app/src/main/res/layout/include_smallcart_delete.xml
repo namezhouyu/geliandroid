@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_itemview_smallcart_delete"
+    android:layout_width="40dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgred_lefttopbot2r_shape"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:text="@string/delete"
+    android:textColor="@color/white">
+</TextView>

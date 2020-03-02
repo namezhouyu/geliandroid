@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <FrameLayout
+        android:id="@+id/fl_uploadcertificate_content"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <include layout="@layout/include_5dpline"/>
+
+    <TextView
+        android:id="@+id/tv_uploadcertificate_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="14dp"
+        tools:text="@string/overseas_list_money"
+        android:textColor="@color/zhusediao"/>
+
+    <include layout="@layout/include_5dpline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/tv_uploadcertficate_unit_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/redyuan_7r_shape"
+            android:drawablePadding="5dp"
+            android:text="@string/unit_bank"
+            android:textColor="@color/specifitext_color"/>
+
+        <TextView
+            android:id="@+id/tv_uploadcertficate_unit_bank_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_uploadcertficate_unit_bank"
+            tools:text="银行" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_uploadcertficate_unit_bank_value"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/redyuan_7r_shape"
+            android:drawablePadding="5dp"
+            android:text="@string/unit_name"
+            android:textColor="@color/specifitext_color"/>
+
+        <TextView
+            android:id="@+id/tv_uploadcertficate_unit_name_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_uploadcertficate_unit_bank_value"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/tv_uploadcertficate_unit_bank"
+            tools:text="开户名称" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_uploadcertficate_unit_name_value"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/redyuan_7r_shape"
+            android:drawablePadding="5dp"
+            android:text="@string/unit_account"
+            android:textColor="@color/specifitext_color"/>
+
+        <TextView
+            android:id="@+id/tv_uploadcertficate_unit_account_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_uploadcertficate_unit_name_value"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/tv_uploadcertficate_unit_bank"
+            tools:text="开户帐号" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_5dpline"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/icon_tishi"
+        android:drawablePadding="5dp"
+        android:text="@string/tips"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/uploadcertificate_message1"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/uploadcertificate_message2"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_uploadcertificate_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linered1dp_bottom_list"
+        android:text="@string/geli_phone"
+        android:textColor="@color/zhusediao"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/bt_uploadcertificate_submit"
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:gravity="bottom"
+        android:text="@string/contact_customer_service_time"
+        android:textSize="12sp"/>
+
+</LinearLayout>

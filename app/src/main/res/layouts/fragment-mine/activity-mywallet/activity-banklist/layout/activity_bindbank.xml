@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:background="@color/backgroundColor"
+              android:paddingBottom="12dp"
+              android:paddingLeft="15dp"
+              android:paddingTop="12dp"
+              android:text="@string/bank_info"
+              android:textSize="16sp"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp">
+        <TextView android:id="@+id/tv_bindbank_bank_number" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/bank_number"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/btn_xiaowenhao"
+                   android:visibility="gone"/>
+        <EditText android:id="@+id/et_bindbank_banknumber" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_bindbank_bank_number"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:hint="@string/please_input_banknumber"
+                  android:paddingBottom="5dp"
+                  android:paddingTop="10dp"
+                  android:textSize="14sp"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp">
+        <TextView android:id="@+id/tv_bindbank_bank_phone" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/bank_phone"/>
+        <EditText android:id="@+id/et_bindbank_phone" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_bindbank_bank_phone"
+                  android:background="@drawable/linegray1dp_bottom_list"
+                  android:hint="@string/please_input_phone"
+                  android:paddingBottom="5dp"
+                  android:paddingTop="10dp"
+                  android:textSize="14sp"/>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp">
+            <TextView android:id="@+id/tv_bindbank_bank_code" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/code"/>
+            <EditText android:id="@+id/et_bindbank_code" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/tv_bindbank_bank_code"
+                      android:background="@drawable/linegray1dp_bottom_list"
+                      android:hint="@string/please_input_code"
+                      android:maxLength="10"
+                      android:paddingBottom="5dp"
+                      android:paddingTop="10dp"
+                      android:singleLine="true"
+                      android:textSize="14sp"/>
+        </RelativeLayout>
+        <Button android:id="@+id/bt_bindbank_getcode" style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borderred1dp_12r_shap"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/getcode"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"/>
+    </FrameLayout>
+    <Button android:id="@+id/bt_bindbank_bind" style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bgred_20r_shape"
+            android:text="@string/bind"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+</LinearLayout>

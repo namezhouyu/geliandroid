@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+    <TextView
+        android:id="@+id/tv_itemview_find_article1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="title"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_itemview_find_video_img"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_loading"
+            app:riv_corner_radius="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_itemview_find_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            tools:text="title"/>
+
+        <ImageView
+            android:id="@+id/iv_itemview_find_video_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/middle_btn_bofangjian"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_itemview_find_video_avatar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:riv_corner_radius="12dp"
+            tools:src="@color/zhusediao"/>
+
+        <TextView
+            android:id="@+id/tv_itemview_find_video_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            tools:text="@string/nickname"/>
+
+        <TextView
+            android:id="@+id/tv_itemview_find_video_viewnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:textSize="10sp"
+            tools:text="浏览次数()"/>
+
+        <CheckBox
+            android:id="@+id/cb_itemview_find_video_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_like_small_selector"
+            android:drawablePadding="2dp"
+            android:text="(1000)"
+            android:textColor="@color/zhusediao"
+            android:textSize="10sp"/>
+    </LinearLayout>
+</LinearLayout>

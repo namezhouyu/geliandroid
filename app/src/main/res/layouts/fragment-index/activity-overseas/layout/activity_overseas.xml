@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_overseas_rootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title"/>
+
+        <com.geli.m.coustomview.MyTabLayout
+            android:id="@+id/mtl_overseas_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_overseas_list_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/spot"/>
+
+                <TextView
+                    android:id="@+id/tv_overseas_list_groubuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/group_buy"/>
+
+                <TextView
+                    android:id="@+id/tv_overseas_list_futures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/futures"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/include_indicator"/>
+
+        </com.geli.m.coustomview.MyTabLayout>
+
+        <include layout="@layout/include_1dpline"/>
+        <include layout="@layout/include_overseas_selecttop"/>
+        <include layout="@layout/include_1dpline"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_overseas_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include layout="@layout/include_overseas_select_details"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_smallcart_rootlayout"/>
+</RelativeLayout>

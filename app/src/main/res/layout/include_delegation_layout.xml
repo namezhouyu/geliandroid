@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_include_delegation_personnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="10sp"
+        tools:text="@string/delegation_personnumber"/>
+
+    <TextView
+        android:id="@+id/tv_include_delegation_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_color"
+        android:textSize="10sp"
+        tools:text="@string/remaining_ton"/>
+
+    <TextView
+        android:id="@+id/tv_include_delegation_progress_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_include_delegation_personnumber"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="10sp"
+        tools:text="70%"/>
+
+    <com.geli.m.coustomview.CustomProgressBar
+        android:id="@+id/cpb_include_delegation_progress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_include_delegation_personnumber"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/tv_include_delegation_progress_number"
+        app:borderColor="@color/specifitext_color"
+        app:isShowDesc="false"
+        app:max="100"
+        app:progress="0"
+        app:progressColor="@color/progress"/>
+</RelativeLayout>

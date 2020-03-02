@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/cLayout_NavItemView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<Button-->
+        <!--android:id="@+id/tv_NavItemView"-->
+        <!--style="@style/MyButton"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:drawablePadding="5dp"-->
+        <!--android:drawableTop="@drawable/middle_btn_pingling"-->
+        <!--android:text="@string/piling_center"-->
+        <!--android:textColor="#2e2e2e"-->
+        <!--android:textSize="10sp"/>-->
+
+    <ImageView
+        android:id="@+id/iv_NavItemView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/middle_btn_pingling"/>
+
+    <TextView
+        android:id="@+id/tv_NavItemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_NavItemView"
+        app:layout_constraintStart_toStartOf="@id/iv_NavItemView"
+        app:layout_constraintEnd_toEndOf="@id/iv_NavItemView"
+        android:layout_marginTop="5dp"
+        android:textColor="#2e2e2e"
+        android:textSize="10sp"
+        tools:text="@string/piling_center"/>
+
+
+</android.support.constraint.ConstraintLayout>

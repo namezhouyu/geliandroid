@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_selectaddress"></include>
+            <include layout="@layout/include_5dpline"></include>
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/erv_submitorder_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.jude.easyrecyclerview.EasyRecyclerView>
+
+            <include layout="@layout/include_5dpline"></include>
+            <include layout="@layout/include_submitorder_deliverymethod"></include>
+
+            <TextView
+                android:id="@+id/tv_submitorder_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/first_btn_jinru"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/whether_invoice"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <Button
+            android:id="@+id/bt_submitorder"
+            style="@style/MyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bgred_lefttopbot2r_shape"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:text="@string/submit_order"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_submitorder_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/bt_submitorder"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:maxWidth="200dp"
+            android:textColor="@color/zhusediao"
+            tools:text="@string/order_price"/>
+
+        <TextView
+            android:id="@+id/tv_submitorder_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_submitorder_total_price"
+            android:text="@string/total"
+            android:textColor="@color/text_color"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_item_VHSort"
+    android:padding="10dp"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_f8f8f8_r5"
+    android:gravity="center"
+    android:textSize="14sp"
+    android:textColor="@color/text_e75d5d"
+    android:maxLines="1"
+    android:ellipsize="end"
+    tools:text="水产品" />

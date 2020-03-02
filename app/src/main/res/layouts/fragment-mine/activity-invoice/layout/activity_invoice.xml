@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <TextView
+        android:id="@+id/tv_record_activityInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/linegray1dp_bottom_list"
+        android:drawableRight="@drawable/first_btn_jinru"
+        android:paddingBottom="14sp"
+        android:paddingTop="14dp"
+        android:text="@string/invoice_record"/>
+
+    <TextView
+        android:id="@+id/tv_type_activityInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/linegray1dp_bottom_list"
+        android:drawableRight="@drawable/first_btn_jinru"
+        android:paddingBottom="14sp"
+        android:paddingTop="14dp"
+        android:text="@string/invoice_type"/>
+
+</LinearLayout>

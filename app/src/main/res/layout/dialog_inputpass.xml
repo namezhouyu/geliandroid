@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/zhusediao">
+
+    <LinearLayout
+        android:id="@+id/dialog_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bgwhite_20r_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/linegray1dp_bottom_list">
+
+            <TextView
+                android:id="@+id/tv_popup_buy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/input_paypass"/>
+
+            <ImageView
+                android:id="@+id/iv_popup_buy_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_quxiao_nor"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_inputpass_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/overseas_list_money"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_inputpass_mess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/withdraw_message"
+            android:textSize="12sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.geli.m.coustomview.PasswordInputView
+                android:id="@+id/piv_inputpass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="20dp"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:minWidth="300dp"
+                android:singleLine="true"
+                app:pivBorderColor="#cccccc"
+                app:pivBorderRadius="2dp"
+                app:pivBorderWidth="1dp"
+                app:pivPasswordColor="@color/black"
+                app:pivPasswordLength="6"
+                app:pivPasswordWidth="5dp"
+                app:pivSplitLineWidth="1dp"/>
+
+            <Button
+                android:id="@+id/btn_dialog_inputpass_cancel"
+                style="@style/MyButton"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bgred_20r_shape"
+                android:paddingLeft="39dp"
+                android:paddingRight="39dp"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

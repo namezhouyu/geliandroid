@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/zhusediao">
+
+    <LinearLayout
+        android:id="@+id/dialog_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bgwhite_5r_shape"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/update_dialog"
+            android:textSize="18dp"/>
+
+        <include layout="@layout/include_1dpline"></include>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <TextView
+                android:id="@+id/tv_updatedversion_mess"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/update_message"/>
+        </android.support.v4.widget.NestedScrollView>
+
+        <include layout="@layout/include_1dpline"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_updatedversion_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="#3b3b3b"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_updatedversion_download"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/zhusediao"
+                android:gravity="center"
+                android:text="@string/update_experience"
+                android:textColor="@color/white"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/zhusediao">
+
+    <LinearLayout
+        android:id="@+id/dialog_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bgwhite_2r_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_dialog_goodsdetails_addcart_img"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/zhusediao"/>
+
+            <ImageView
+                android:id="@+id/iv_dialog_goodsdetails_addcart_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/btn_quxiao_nor"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_goodsdetails_addcart_info_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_dialog_goodsdetails_addcart_img"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_dialog_goodsdetails_addcart_img"
+                android:textSize="10sp"
+                tools:text="@string/remaining_cabinet"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_goodsdetails_addcart_info_specifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_dialog_goodsdetails_addcart_info_stock"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_dialog_goodsdetails_addcart_img"
+                android:textSize="12sp"
+                tools:text="规格"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_goodsdetails_addcart_info_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_dialog_goodsdetails_addcart_info_specifi"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_dialog_goodsdetails_addcart_img"
+                android:textColor="@color/zhusediao"
+                tools:text="@string/overseas_list_money"/>
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_dialog_goodsdetails_specifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_goodsdetails_addcart_specifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/buy_number"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/iv_goodsdetails_addcart_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/btn_jiahao_nor50"/>
+
+            <EditText android:id="@+id/et_goodsdetails_addcart_number"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_goodsdetails_addcart_add"
+                android:background="@drawable/borderred1dp_2r_shap"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="6"
+                android:minWidth="25dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="1"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/iv_goodsdetails_addcart_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/et_goodsdetails_addcart_number"
+                android:src="@drawable/btn_jianhao_nor50"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_goodsdetails_addcart_info_toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/zhusediao"
+            android:textSize="12sp"
+            tools:text="满xxx"/>
+
+        <Button
+            android:id="@+id/bt_dialog_goodsdetails_addcart_determine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bgred_2r_shape"
+            android:text="@string/add_cart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>

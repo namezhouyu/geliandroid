@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_goodsproduct2_rootlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shadow_radius2"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_itemview_goodsproduct2_img"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_goodsproduct2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:text="思念2.5kg光汤包"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_goodsproduct2_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="$xxx"
+        android:textColor="@color/zhusediao"
+        android:textSize="14sp"/>
+</LinearLayout>

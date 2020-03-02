@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zhusediao"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_shop_name_aorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="广州批零中心账期商品"/>
+
+        <TextView
+            android:id="@+id/tv_toast_mess_aorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="您的账期结算时间剩余：6天13小时"/>
+    </LinearLayout>
+
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv_aorder"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="right|center_vertical">
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text_color"
+                android:text="@string/real_payment_1" />
+
+            <TextView
+                android:id="@+id/tv_price_aorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_f36a6a"
+                tools:text="¥56263.00" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_all_checkout_aorder"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_btn_bg_red_red_stroke"
+            android:text="@string/all_checkout"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

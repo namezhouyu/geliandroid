@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/please_input_newloginpass"
+        android:textColor="@color/specifitext_color"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/shadow_radius4"
+        android:orientation="horizontal"
+        android:paddingBottom="18dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="11dp"
+        android:paddingTop="18dp">
+
+        <EditText
+            android:id="@+id/et_loginpasssetting_newpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_mima"
+            android:hint="@string/please_input_pass"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/et_hint_color"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/cb_loginpasssetting_viewpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_pass_select"
+            android:button="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/regist_message2"
+        android:textColor="#2e2e2e"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/bt_loginpasssetting_submit"
+        style="@style/MyButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:text="@string/submit"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

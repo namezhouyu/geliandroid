@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4"
+    android:orientation="vertical"
+    tools:context="com.geli.m.mvp.home.index_fragment.location_activity.LocationActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_rootlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/title_bottomline"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_location_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/nav_btn_fanhui"/>
+
+        <ImageView
+            android:id="@+id/iv_location_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_qingkong"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/et_location_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_location_clear"
+            android:layout_toRightOf="@id/iv_location_back"
+            android:background="@null"
+            android:hint="@string/location_search"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/location_specifitext_color"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bgwhite_2r_shape">
+
+        <LinearLayout
+            android:id="@+id/ll_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_location"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:id="@+id/tv_location_selectarea"
+                android:drawableRight="@drawable/first_btn_jinru"
+                android:text="@string/select_city"
+                android:textColor="@color/specifitext_color"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_location_layout"
+            app:scrollbars="none">
+
+        </com.jude.easyrecyclerview.EasyRecyclerView>
+
+        <TextView
+            android:id="@+id/tv_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/voip_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible"/>
+
+        <com.geli.m.coustomview.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sideTextSize="12dp"/>
+
+    </RelativeLayout>
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/vp_adreess_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></android.support.v4.view.ViewPager>-->
+
+</LinearLayout>

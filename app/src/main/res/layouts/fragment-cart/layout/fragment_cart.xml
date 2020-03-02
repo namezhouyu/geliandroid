@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_cart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        app:contentInsetStart="0dp">
+
+        <include layout="@layout/include_title"></include>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_cart_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/erv_cart_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:scrollbars="none"/>
+
+
+            <LinearLayout
+                android:id="@+id/layout_cart_ap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cb_cart_use_ap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/cb_dayuan_selector"
+                    android:button="@null"
+                    android:textColor="@color/text_color"
+                    android:text="@string/account_purchase"/>
+
+
+                <TextView
+                    android:id="@+id/tv_cart_ap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right"
+                    android:textColor="@color/zhusediao"
+                    tools:text="@string/exceed_account_go"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_cart_checkall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/cb_dayuan_selector"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:text="@string/all_select"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_cart_bottom_price_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/free_shipping"
+                        android:textColor="@color/specifitext_color"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/total"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cart_totalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/overseas_list_money"
+                        android:textColor="@color/zhusediao"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_cart_settlement"
+                    style="@style/MyButton"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_btn_bg_yelllow_gray"
+                    android:text="@string/settlement"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_cart_nologin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:background="@color/transparent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="147dp"
+                android:src="@drawable/img_shuju"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/bgred_2r_shape"
+                android:id="@+id/tv_cart_login"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="3dp"
+                android:text="@string/mine_login_regist"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toast_cf"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@color/bg_cce75d5d"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:text="@string/exceed_account"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_overseas_select_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp">
+
+        <TextView
+            android:id="@+id/tv_overseas_select_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="5dp"
+            android:textSize="12sp"
+            tools:text="国家"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_overseas_select_country"
+            android:src="@drawable/btn_hei_xiala"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_overseas_select_goodstype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp">
+
+        <TextView
+            android:id="@+id/tv_overseas_select_goodstype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="5dp"
+            android:textSize="12sp"
+            tools:text="食品类型"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_overseas_select_goodstype"
+            android:src="@drawable/btn_hei_xiala"/>
+    </RelativeLayout>
+
+
+    <!--<RadioGroup-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@null"-->
+            <!--android:button="@null"-->
+            <!--android:drawableRight="@drawable/cb_xiaoyuan_selector"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingRight="60dp"-->
+            <!--android:paddingLeft="60dp"-->
+            <!--android:textSize="12sp"-->
+            <!--tools:text="国家"/>-->
+
+
+        <!--<RadioButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@null"-->
+            <!--android:button="@null"-->
+            <!--android:drawableRight="@drawable/cb_xiaoyuan_selector"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingRight="60dp"-->
+            <!--android:paddingLeft="60dp"-->
+            <!--android:textSize="12sp"-->
+            <!--tools:text="食品类型"/>-->
+
+    <!--</RadioGroup>-->
+</LinearLayout>

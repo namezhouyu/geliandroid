@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroundColor"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:layout_marginTop="25dp"
+                  android:background="@drawable/bgwhite_20r_shape"
+                  android:orientation="vertical"
+                  android:paddingLeft="15dp"
+                  android:paddingRight="15dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/linegray1dp_bottom_list"
+                      android:orientation="horizontal">
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="15dp"
+                         android:layout_marginTop="16dp"
+                         android:layout_weight="1">
+                <CheckBox android:id="@+id/cb_recharge_weixin" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:background="@null"
+                          android:button="@null"
+                          android:checked="true"
+                          android:drawableLeft="@drawable/cb_dayuan_selector"
+                          android:drawablePadding="5dp"
+                          android:text="@string/weixin_recharge"
+                          android:textColor="@color/text_color"/>
+            </FrameLayout>
+            <ImageView android:layout_width="1dp" android:layout_height="match_parent"
+                       android:layout_marginBottom="7dp"
+                       android:layout_marginTop="7dp"
+                       android:background="@color/line_color"/>
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="wrap_content" android:layout_marginBottom="15dp"
+                         android:layout_marginTop="16dp"
+                         android:layout_weight="1">
+                <CheckBox android:id="@+id/cb_recharge_zhifubao" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center" android:background="@null"
+                          android:button="@null" android:drawableLeft="@drawable/cb_dayuan_selector"
+                          android:drawablePadding="5dp"
+                          android:text="@string/zhifubao_recharge"
+                          android:textColor="@color/text_color"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="15dp"
+                  android:layout_marginTop="15dp"
+                  android:text="@string/recharge_money" android:textSize="18sp"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/linegray1dp_bottom_list"
+                      android:orientation="horizontal"
+                      android:paddingBottom="5dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="@string/money_unit"
+                      android:textSize="18sp"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:layout_marginLeft="5dp"
+                      android:background="@null"
+                      android:textCursorDrawable="@drawable/color_cursor"
+                      android:textSize="25sp"/>
+        </LinearLayout>
+        <Button android:id="@+id/bt_recharge" style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bgred_20r_shape"
+                android:text="@string/recharge" android:textColor="@color/white"
+                android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>

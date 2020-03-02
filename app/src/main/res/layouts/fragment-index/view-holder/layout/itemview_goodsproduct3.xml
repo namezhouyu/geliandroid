@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/shadow_radius2"
+                android:padding="5dp">
+    <ImageView android:id="@+id/iv_itemview_goodsproduct3_img" android:layout_width="160dp"
+               android:layout_height="160dp"
+               android:layout_centerHorizontal="true"
+               android:padding="5dp"/>
+    <TextView android:id="@+id/tv_itemview_goodsproduct3_money" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:textColor="@color/zhusediao"
+              android:textSize="12sp"
+              tools:text="$xxx"
+    />
+    <TextView android:id="@+id/tv_itemview_goodsproduct3_name" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@id/tv_itemview_goodsproduct3_money"
+              android:layout_marginBottom="10dp"
+              android:ellipsize="end"
+              android:maxEms="6"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:textSize="14sp"
+              tools:text="思念2.5kg光汤包"/>
+
+</RelativeLayout>

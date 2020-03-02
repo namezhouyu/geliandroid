@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.geli.m.coustomview.SpecificLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_addcart_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_goodsdetails_addcart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/taste"/>
+
+    <com.geli.m.coustomview.FluidLayout
+        android:id="@+id/fl_dialog_goodsdetails_addcart_taste_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        app:child_marginLeft="15dp"
+        app:child_marginTop="5dp"/>
+
+</com.geli.m.coustomview.SpecificLayout>

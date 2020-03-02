@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <ImageView android:id="@+id/iv_expensesdetails_img" android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="20dp"
+               tools:background="@color/zhusediao"/>
+    <TextView android:id="@+id/tv_expensesdetails_name" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              tools:text="title"
+    />
+    <TextView android:id="@+id/tv_expensesdetails_mess" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="5dp" android:textColor="@color/specifitext_color"
+              android:textSize="12sp"
+              tools:text="mess"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+                  android:background="@drawable/linegray05dp_top_list"
+                  android:orientation="horizontal"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/amount"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_price" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/amount"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/linegray05dp_top_list"
+                  android:orientation="horizontal"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/pay_method"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_paymethod" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/pay_method"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/linegray05dp_top_list"
+                  android:orientation="horizontal"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/goods_des"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_goodsdes" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/goods_des"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/linegray05dp_top_list"
+                  android:orientation="horizontal"
+                  android:paddingBottom="15dp"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/shipping_address1"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_shipping" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/shipping_address1"/>
+    </LinearLayout>
+    <include layout="@layout/include_05dpline"></include>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingTop="15dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/order_number1"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_ordernumber" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/order_number1"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingTop="10dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:text="@string/create_time"
+                  android:textColor="@color/specifitext_color"/>
+        <TextView android:id="@+id/tv_expensesdetails_time" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="15dp"
+                  android:gravity="right"
+                  tools:text="@string/create_time"/>
+    </LinearLayout>
+</LinearLayout>

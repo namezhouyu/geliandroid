@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/btn_lianxishangjia"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/shop_score"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logistics_speed"/>
+
+        <com.geli.m.coustomview.RatingBar
+            android:id="@+id/rb_include_goodscomment_logisticsscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            app:starEmpty="@drawable/btn_aixin_nor"
+            app:starFill="@drawable/btn_aixin_hig"
+            app:starImageSize="20dp"
+            app:starPadding="7dp"
+            app:starStep="5"
+            app:stepSize="Full"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/service_attitude"/>
+
+        <com.geli.m.coustomview.RatingBar
+            android:id="@+id/rb_include_goodscomment_servicescore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            app:starEmpty="@drawable/btn_aixin_nor"
+            app:starFill="@drawable/btn_aixin_hig"
+            app:starImageSize="20dp"
+            app:starPadding="7dp"
+            app:starStep="5"
+            app:stepSize="Full"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_goodscomment_release"
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="@string/release"
+        android:textColor="@color/white"/>
+</LinearLayout>

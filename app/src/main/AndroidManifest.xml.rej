@@ -1,0 +1,9 @@
+diff a/gullyShop/app/src/main/AndroidManifest.xml b/gullyShop/app/src/main/AndroidManifest.xml	(rejected hunks)
+@@ -65,7 +65,6 @@
+         <activity android:name=".activity.AddAddressActivity" />
+         <activity android:name=".activity.ConfirmAnOrderActivity" />
+         <activity android:name=".activity.RetailCenterActivity" />
+-        <!--下载新的apk监听广播-->
+         <!-- 下载新的apk监听广播 -->
+         <receiver android:name=".BroadcastReceiver.UpdataBroadcastReceiver">
+             <intent-filter>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_radius2"
+                android:padding="5dp">
+    <ImageView android:id="@+id/iv_itemview_goodssearch_grid_overseas_img"
+               android:layout_width="match_parent"
+               android:layout_height="160dp"
+               android:layout_centerHorizontal="true"
+               android:padding="5dp"
+               tools:background="@drawable/img_loading"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_overseas_from"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bgred_lefttoprightbot2r_shape"
+              android:paddingBottom="3dp" android:paddingLeft="4dp" android:paddingRight="4dp"
+              android:paddingTop="3dp"
+              android:text="@string/origin"
+              android:textColor="@color/white"
+              android:textSize="9sp"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_overseas_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/iv_itemview_goodssearch_grid_overseas_img"
+              android:layout_marginTop="5dp"
+              android:ellipsize="end"
+              android:maxEms="6"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:text="思念2.5kg光汤包"
+              android:textColor="@color/text_color"
+              android:textSize="14sp"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_overseas_type"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/iv_itemview_goodssearch_grid_overseas_img"
+              android:layout_marginLeft="5dp"
+              android:layout_marginTop="5dp"
+              android:layout_toRightOf="@id/tv_itemview_goodssearch_grid_overseas_name"
+              android:background="@drawable/bordergray1dp_2r_shape"
+              android:paddingBottom="2dp"
+              android:paddingLeft="3dp"
+              android:paddingRight="3dp"
+              android:paddingTop="2dp"
+              android:text="期货"
+              android:textColor="@color/specifitext_color"
+              android:textSize="10sp"/>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_overseas_spectifi"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_itemview_goodssearch_grid_overseas_name"
+              android:layout_marginRight="5dp"
+              android:layout_marginTop="10dp"
+              android:text="规格:300g*50包/件;500g*50包
+口味:"
+              android:textColor="@color/specifitext_color"
+              android:textSize="10sp"/>
+    <RelativeLayout android:id="@+id/rl_itemview_goodssearch_grid_overseas_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_itemview_goodssearch_grid_overseas_spectifi"
+                    android:layout_marginTop="5dp">
+        <include layout="@layout/include_delegation_layout"></include>
+    </RelativeLayout>
+    <TextView android:id="@+id/tv_itemview_goodssearch_grid_overseas_price"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/rl_itemview_goodssearch_grid_overseas_layout"
+              android:layout_marginTop="5dp"
+              android:text="$xxx"
+              android:textColor="@color/zhusediao"
+              android:textSize="12sp"
+    />
+
+</RelativeLayout>

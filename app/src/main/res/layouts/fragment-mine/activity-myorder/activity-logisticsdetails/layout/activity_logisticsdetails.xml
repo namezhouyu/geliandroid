@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/include_title"></include>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <FrameLayout
+            android:id="@+id/fl_logisticsdetails_imglayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_logisticsdetails_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/zhusediao"/>
+
+            <TextView
+                android:id="@+id/tv_logisticsdetails_goodsnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent50"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="共五件"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/fl_logisticsdetails_imglayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zhusediao"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/transit"
+                tools:text="状态" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_logisticsdetails_ordernumber"
+                android:textColor="@color/specifitext_color"
+                android:textSize="12sp"
+                tools:text="@string/order_number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_logisticsdetails_phone"
+                android:textColor="@color/specifitext_color"
+                android:textSize="12sp"
+                tools:text="物流热线"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_5dpline"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_logisticsdetails_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scrollbars="none"/>
+
+</LinearLayout>

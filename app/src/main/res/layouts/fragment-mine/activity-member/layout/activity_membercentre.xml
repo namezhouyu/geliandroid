@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zhusediao"
+        android:paddingLeft="15dp"
+        android:paddingRight="30dp"
+        android:paddingTop="15dp">
+
+        <com.geli.m.coustomview.ShapeImageView
+            android:id="@+id/siv_membercenter_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:ml_radius="25dp"/>
+
+        <TextView
+            android:id="@+id/tv_membercenter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/siv_membercenter_img"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/siv_membercenter_img"
+            android:textColor="@color/white"
+            tools:text="steam"/>
+
+        <TextView
+            android:id="@+id/tv_membercenter_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_membercenter_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/siv_membercenter_img"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:text="@string/integral"/>
+
+        <com.geli.m.coustomview.CustomProgressBar
+            android:id="@+id/cpb_membercenter_progress"
+            android:layout_width="150dp"
+            android:layout_height="8dp"
+            android:layout_below="@id/siv_membercenter_img"
+            android:layout_marginTop="7dp"
+            app:borderColor="@color/specifitext_color"
+            app:isShowDesc="false"
+            app:max="100"
+            app:progress="0"
+            app:progressColor="#efcf4e"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_membercenter_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_paijinvip"/>
+
+            <TextView
+                android:id="@+id/tv_membercenter_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_membercenter_grade"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:text="铂金VIP"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_member_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

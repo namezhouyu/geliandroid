@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_itemview_coupon_leftlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_honghong">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_itemview_coupon_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overseas_list_money"
+                android:textColor="@color/zhusediao"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_itemview_coupon_specifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coupon_user_specifi"
+                android:textColor="@color/zhusediao"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_youhuiquanyou">
+
+        <RelativeLayout
+            android:id="@+id/rl_itemview_coupon_statelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp">
+
+            <Button
+                android:id="@+id/bt_itemview_coupon_receive"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bgred_12r_shape"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="4dp"
+                android:text="@string/receive"
+                android:textColor="@color/white" />
+
+            <com.geli.m.coustomview.CouponImagView
+                android:id="@+id/civ_itemview_coupon_yilingqu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/img_yilin"
+                android:visibility="gone"
+                app:rotate="-40"
+                app:text="@string/coupon_yilingqu"
+                app:text_color="@color/specifitext_color"
+                app:text_size="12dp"/>
+
+            <com.geli.m.coustomview.CouponImagView
+                android:id="@+id/civ_itemview_coupon_yiguoqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/img_yilin"
+                android:visibility="gone"
+                app:rotate="-40"
+                app:text="@string/coupon_yiguoqi"
+                app:text_color="@color/specifitext_color"
+                app:text_size="12dp"/>
+
+            <com.geli.m.coustomview.CouponImagView
+                android:id="@+id/civ_itemview_coupon_yishiyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/img_yilin"
+                android:visibility="gone"
+                app:rotate="-40"
+                app:text="@string/coupon_yishiyong"
+                app:text_color="@color/specifitext_color"
+                app:text_size="12dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/rl_itemview_coupon_statelayout"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tv_itemview_coupon_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                tools:text="批零中心通用券" />
+
+            <TextView android:id="@+id/tv_itemview_coupon_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/specifitext_color"
+                android:textSize="12sp"
+                tools:text="@string/coupon_time" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

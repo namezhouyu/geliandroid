@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dialog_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/paymethod"
+            android:textColor="@color/zhusediao"
+            android:textSize="16dp"/>
+
+        <include layout="@layout/include_1dpline"/>
+
+
+        <TextView
+            android:id="@+id/tv_dialog_pay_gelipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/geli_pay"/>
+
+        <include layout="@layout/include_1dpline"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_pay_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/wechat_pay"/>
+
+        <include layout="@layout/include_1dpline"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_pay_zhifubao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/ali_pay1"/>
+
+        <include layout="@layout/include_1dpline"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_pay_xianxia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/linedown_pay"/>
+
+        <include layout="@layout/include_1dpline"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_pay_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/wallet_pay"/>
+
+    </LinearLayout>
+</RelativeLayout>

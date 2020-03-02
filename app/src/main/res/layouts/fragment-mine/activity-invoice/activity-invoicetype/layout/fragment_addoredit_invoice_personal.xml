@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/rg_invoice_personal_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rb_invoice_personal_pagerinvoice"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp">
+
+        <RadioButton
+            android:id="@+id/rb_invoice_personal_pagerinvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_dayuan_selector"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/invoice_pagerinvoice"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_invoice_personal_electronic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_dayuan_selector"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/invoice_electronicinvoice"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/linegray05dp_bottom_list"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/invoice_contact"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/et_personalinvoice_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_invoice_personal_pager_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/linegray05dp_bottom_list"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_invoice_phone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/addinvoice_contactphone"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/et_personalinvoice_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/addinvoice_hintphone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_invoice_personal_electronic_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/linegray05dp_bottom_list"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_invoice_email"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/addinvoice_emailaddress"
+            android:textSize="12sp"/>
+        <EditText
+            android:id="@+id/et_personalinvoice_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/addinvoice_hintemail"
+            android:singleLine="true"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <Button
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/bt_personalinvoice_save"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp"
+        android:text="@string/save"
+        android:textColor="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+Order/Submit
+
+刘俊宏 2018/5/22 15:51:01
+提交参数：user_id   type//1商品 2物流 3商家   order_id  content  contact  contact_method  imageArr
+15:52:30
+刘俊宏 2018/5/22 15:52:30
+获取联系人信息：order/orderContact
+
+刘俊宏 2018/5/22 15:52:39
+提交参数：user_id    order_id
+
+刘俊宏 2018/5/22 15:53:21
+返回参数：consignee 联系人 mobile 电话
+16:22:24
+刘俊宏 2018/5/22 16:22:24
+提交参数：user_id   type//1商品 2物流 3商家   order_id  content  contact  contact_method  img_number

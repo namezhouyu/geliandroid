@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_shopdetails_goodslayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_et_search"></include>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv_shopdetails_goods_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/erv_goodstitle_bgcolor"
+            app:scrollbars="none"/>
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/erv_shopdetails_goods_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:scrollbars="none">
+        </com.jude.easyrecyclerview.EasyRecyclerView>
+
+    </LinearLayout>
+</LinearLayout>

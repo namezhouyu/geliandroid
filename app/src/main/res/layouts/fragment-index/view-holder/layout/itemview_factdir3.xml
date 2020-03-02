@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_weight="1"
+    android:background="@drawable/bordergray05dp_shape"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_itemview_factdir3_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bgred_rightbott2r_shape"
+        android:paddingBottom="3dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:text="来自东方" />
+
+    <ImageView
+        android:id="@+id/iv_itemview_factdir3_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_factdir3_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemview_factdir3_unit"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/iv_itemview_factdir3_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="名字名字名名" />
+
+    <TextView
+        android:id="@+id/tv_itemview_factdir3_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemview_factdir3_name"
+        android:layout_marginLeft="7dp"
+        android:textColor="@color/zhusediao"
+        android:textSize="14sp"
+        tools:text="$65"/>
+
+</RelativeLayout>

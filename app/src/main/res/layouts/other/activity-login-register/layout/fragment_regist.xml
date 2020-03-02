@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="47dp"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="47dp"
+    android:paddingRight="47dp">
+
+    <EditText
+        android:id="@+id/et_regist_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomline_et"
+        android:drawableLeft="@drawable/icon_shouji"
+        android:hint="@string/please_input_phone"
+        android:inputType="phone"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textColorHint="@color/et_hint_color"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bottomline_et"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_regist_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_yanzhenma"
+            android:hint="@string/please_input_code"
+            android:inputType="number"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/et_hint_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_regist_getcode"
+            style="@style/MyButton"
+            android:layout_width="70dp"
+            android:layout_height="22dp"
+            android:background="@drawable/bordergray1dp_12r_shape"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/getcode"
+            android:textColor="@color/getcode_tv_color"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bottomline_et"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_regist_newpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/icon_mima"
+            android:hint="@string/please_input_pass"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/et_hint_color"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/cb_regist_viewpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_pass_select"
+            android:button="@null" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/regist_message2"
+        android:textColor="#2e2e2e"
+        android:textSize="10sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_regist_xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/xieyicb_regist_select"
+            android:button="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regist_message"
+            android:textColor="#2e2e2e"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_regist_gotoxieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regist_message1"
+            android:textColor="@color/zhusediao"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_regist" style="@style/MyButton"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/loginbt_shape"
+        android:button="@null"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="@string/regist"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

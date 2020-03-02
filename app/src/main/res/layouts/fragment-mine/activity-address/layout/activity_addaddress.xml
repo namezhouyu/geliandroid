@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/linegray1dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receiver"/>
+
+                <EditText
+                    android:id="@+id/et_addaddress_shippingname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/linegray1dp_bottom_list"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_number"/>
+
+                <EditText
+                    android:id="@+id/et_addaddress_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_addaddress_gotoaddbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/borderred1dp_2r_shap"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/btn_tongxunlu"
+            android:padding="13dp"
+            android:text="@string/address_book"
+            android:textColor="@color/zhusediao"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/location" />
+
+        <TextView
+            android:id="@+id/tv_addaddress_selectaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-5dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/first_btn_jinru"
+            android:padding="5dp"
+            android:text="@string/please_select_address"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bggary_2r_shape">
+
+        <EditText
+            android:id="@+id/et_addaddress_detailsadd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/address_inputmess"
+            android:textColor="@color/text_color"
+            android:textColorHint="#b4b4b4"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_addaddress_detailsadd_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="0/50"
+            android:textColor="@color/text_color"
+            android:textSize="10sp"/>
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_addaddress_isdefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/xieyicb_regist_select"
+        android:drawablePadding="5dp"
+        android:text="@string/set_default_address"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/bt_addaddress_save"
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bgred_20r_shape"
+        android:paddingLeft="39dp"
+        android:paddingRight="39dp"
+        android:text="@string/save"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

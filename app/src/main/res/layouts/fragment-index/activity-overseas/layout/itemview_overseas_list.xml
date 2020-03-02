@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:layout_margin="15dp"
+              android:orientation="horizontal">
+    <RelativeLayout android:layout_width="110dp" android:layout_height="110dp"
+                    android:background="@drawable/shadow_radius2">
+        <ImageView android:id="@+id/iv_itemview_overseas_list_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:background="@color/text_color"/>
+        <TextView android:id="@+id/tv_itemview_overseas_list_origin"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/bgred_rightbott2r_shape"
+                  android:paddingBottom="3dp" android:paddingLeft="4dp" android:paddingRight="4dp"
+                  android:paddingTop="3dp"
+                  android:textColor="@color/white"
+                  android:textSize="9sp"
+                  tools:text="@string/origin"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp">
+        <TextView android:id="@+id/tv_itemview_overseas_list_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:maxEms="8"
+                  android:singleLine="true"
+                  tools:text="法国进口冷冻鲤鱼等等"/>
+        <TextView android:id="@+id/tv_itemview_overseas_list_type"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="2dp"
+                  android:layout_toRightOf="@id/tv_itemview_overseas_list_name"
+                  android:background="@drawable/bordergray1dp_2r_shape"
+                  android:paddingBottom="2dp"
+                  android:paddingLeft="3dp"
+                  android:paddingRight="3dp"
+                  android:paddingTop="2dp"
+                  android:textColor="@color/specifitext_color"
+                  android:textSize="8sp"
+                  tools:text="团购"/>
+        <TextView android:id="@+id/tv_itemview_overseas_list_spectifi"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_itemview_overseas_list_name"
+                  android:layout_marginTop="7dp"
+                  android:textColor="@color/specifitext_color"
+                  android:textSize="10sp"
+                  tools:text="规格:300g*50包/件;500g*50包"/>
+        <Button android:id="@+id/bt_itemview_overseas_list_qualifications" style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_itemview_overseas_list_name"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/borderred1dp_2r_shap"
+                android:paddingBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="2dp"
+                android:text="@string/factory_qualifications"
+                android:textColor="@color/zhusediao"
+                android:textSize="10sp"/>
+        <TextView android:id="@+id/tv_itemview_overseas_list_price"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/zhusediao"
+                  tools:text="@string/overseas_list_money"/>
+        <FrameLayout android:id="@+id/fl_itemview_overseas_list_progress"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_above="@id/tv_itemview_overseas_list_price"
+                     android:layout_marginBottom="5dp"
+                     android:visibility="gone"
+                     tools:visibility="visible">
+            <include layout="@layout/include_delegation_layout"></include>
+        </FrameLayout>
+        <TextView android:id="@+id/tv_itemview_overseas_list_selfrom"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_above="@id/tv_itemview_overseas_list_price"
+                  android:layout_marginBottom="5dp" android:textColor="@color/specifitext_color"
+                  android:textSize="12sp"
+                  android:visibility="gone"
+                  tools:text="@string/setfrom_pieces"
+                  tools:visibility="visible"/>
+        <Button android:id="@+id/bt_itemview_overseas_list_selectspecifi" style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp" android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bgred_12r_shape"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" android:text="@string/select_specifi"
+                android:textColor="@color/white"
+                android:textSize="12sp" android:visibility="gone"
+                tools:visibility="visible"
+        />
+    </RelativeLayout>
+</LinearLayout>

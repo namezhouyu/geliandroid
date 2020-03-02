@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:mytool="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.geli.m.coustomview.LogisticsDetailsRound
+        android:id="@+id/ldr_itemview_logisticsdetails_rount"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        mytool:ldr_big_color="@color/zhusediao"
+        mytool:ldr_small_color="@color/specifitext_color"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_logisticsdetails_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ldr_itemview_logisticsdetails_rount"
+        android:layout_marginEnd="45dp"
+        android:text="02-03"
+        android:textColor="@color/zhusediao"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_logisticsdetails_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_itemview_logisticsdetails_date"
+        android:layout_below="@+id/tv_itemview_logisticsdetails_date"
+        android:text="14:20"
+        android:textColor="@color/zhusediao"
+        android:textSize="10sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_itemview_logisticsdetails_mess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ldr_itemview_logisticsdetails_rount"
+        android:text="物流信息"
+        android:textColor="@color/zhusediao" />
+
+</RelativeLayout>

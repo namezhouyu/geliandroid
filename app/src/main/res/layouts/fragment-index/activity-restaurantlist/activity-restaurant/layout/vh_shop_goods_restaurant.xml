@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:padding="6dp"
+    android:background="@drawable/shape_bg_stroke_gray_r4"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_goods_ShopGoodsRestaurantVH"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        tool:background="@drawable/icon"/>
+
+    <TextView
+        android:id="@+id/tv_goodsName_ShopGoodsRestaurantVH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:maxEms="6"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_333333"
+        tool:text="xxx商品"/>
+
+    <TextView
+        android:id="@+id/tv_price_ShopGoodsRestaurantVH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/zhusediao"
+        tool:text="￥185.00"/>
+</LinearLayout>

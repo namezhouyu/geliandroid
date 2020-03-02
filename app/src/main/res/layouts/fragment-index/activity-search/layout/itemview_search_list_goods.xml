@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="15dp"
+              android:orientation="horizontal">
+    <RelativeLayout android:layout_width="110dp" android:layout_height="110dp"
+                    android:background="@drawable/shadow_radius2">
+        <ImageView android:id="@+id/iv_itemview_goodssearch_gird_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:background="@color/text_color"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp">
+        <TextView android:id="@+id/tv_itemview_goodssearch_list_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:maxEms="8"
+                  android:singleLine="true"
+                  tools:text="法国进口冷冻鲤鱼等等"/>
+        <TextView android:id="@+id/tv_itemview_goodssearch_list_spectifi"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tv_itemview_goodssearch_list_name"
+                  android:layout_marginTop="10dp"
+                  android:maxEms="10"
+                  android:singleLine="true"
+                  android:textColor="@color/specifitext_color"
+                  android:textSize="10sp"
+                  tools:text="规格:300g*50包/件;500g*50包"/>
+        <TextView android:id="@+id/tv_itemview_goodssearch_list_price"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/zhusediao"
+                  tools:text="@string/overseas_list_money"/>
+    </RelativeLayout>
+</LinearLayout>
